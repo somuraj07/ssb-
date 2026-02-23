@@ -33,7 +33,7 @@ export default function MOUs() {
         "Professional network building"
       ],
       icon: "🎓",
-      color: "var(--accent)"
+      color: "var(--brand)"
     },
     {
       title: "APSSDC Partnership",
@@ -49,7 +49,7 @@ export default function MOUs() {
         "Government scheme benefits"
       ],
       icon: "🏢",
-      color: "var(--brand-light)"
+      color: "var(--brand)"
     }
   ];
 
@@ -126,11 +126,11 @@ export default function MOUs() {
                     
                     <div style={{ display: 'grid', gridTemplateColumns: '80px 1fr', gap: '2rem', alignItems: 'start', position: 'relative', zIndex: 1 }}>
                       <div style={{
-                        fontSize: '4em',
+                        fontSize: '3em',
                         textAlign: 'center',
                         background: 'var(--surface-1)',
                         borderRadius: 'var(--radius-lg)',
-                        padding: '1rem',
+                        
                         border: '1px solid var(--border-light)'
                       }}>
                         {mou.icon}

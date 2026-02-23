@@ -116,10 +116,10 @@ export default function Ranks() {
  
 
   const importantDates = [
-    { event: "AP ICET Application", date: "March 2025", status: "upcoming" },
-    { event: "Exam Date", date: "May 2025", status: "upcoming" },
-    { event: "Results Declaration", date: "June 2025", status: "upcoming" },
-    { event: "Counseling Process", date: "July-August 2025", status: "upcoming" }
+    { event: "AP ICET Application", date: "March 2026", status: "upcoming" },
+    { event: "Exam Date", date: "May 2026", status: "upcoming" },
+    { event: "Results Declaration", date: "June 2026", status: "upcoming" },
+    { event: "Counseling Process", date: "July-August 2026", status: "upcoming" }
   ];
 
   return (
@@ -318,7 +318,7 @@ export default function Ranks() {
                 <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
                   <span className="text-2xl">📅</span>
                 </div>
-                Important Dates 2025
+                Important Dates 2026
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8">

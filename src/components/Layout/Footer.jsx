@@ -33,7 +33,7 @@ export default function Footer() {
             <p>Behind Sri Sathya Sai Super Speciality Hospital</p>
             <p>Sri Sathyasai District, Andhra Pradesh</p>
             <div className="mt-2">
-              <p>mail : enquiry@sanskrithibschool.com</p>
+              <p>mail : admissions.director@sanskrithibschool.com</p>
               <p>📞 +91 9100064545</p>
               <p>📞 +91 9100074545</p>
             </div>

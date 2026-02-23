@@ -174,14 +174,14 @@ export default function AcademicScholarships() {
             <Card>
               <h2 className="text-2xl font-bold text-[var(--text)] mb-6 flex items-center gap-3">
                 <span className="text-3xl">📅</span>
-                Important Dates 2025
+                Important Dates 2026
               </h2>
               <div className="grid md:grid-cols-4 gap-6">
                 {[
                   { title: "Applications Open", date: "Dec 2024", desc: "Scholarship applications accepted" },
-                  { title: "Document Submission", date: "Mar 2025", desc: "Last date for document upload" },
-                  { title: "Selection Process", date: "Apr 2025", desc: "Committee evaluation period" },
-                  { title: "Results Declaration", date: "May 2025", desc: "Scholarship awards announced" }
+                  { title: "Document Submission", date: "Mar 2026", desc: "Last date for document upload" },
+                  { title: "Selection Process", date: "Apr 2026", desc: "Committee evaluation period" },
+                  { title: "Results Declaration", date: "May 2026", desc: "Scholarship awards announced" }
                 ].map((item, i) => (
                   <div key={i} className="text-center p-4 rounded-lg bg-[var(--surface-1)] border border-[var(--border-light)]">
                     <h4 className="font-semibold text-[var(--text)] mb-2">{item.title}</h4>

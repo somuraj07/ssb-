@@ -129,7 +129,7 @@ export default function AdmissionProcedure() {
                 <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
                   <span className="text-2xl">🗓️</span>
                 </div>
-                Admission Timeline 2025
+                Admission Timeline 2026
               </h2>
               
               <div className="relative">
@@ -145,31 +145,31 @@ export default function AdmissionProcedure() {
                       status: "current"
                     },
                     {
-                      month: "Jan - Mar 2025",
+                      month: "Jan - Mar 2026",
                       title: "Application Period",
                       desc: "Submit applications with required documents and entrance exam scores",
                       status: "upcoming"
                     },
                     {
-                      month: "Apr 2025",
+                      month: "Apr 2026",
                       title: "Application Review",
                       desc: "Academic record verification and initial screening process",
                       status: "upcoming"
                     },
                     {
-                      month: "May 2025",
+                      month: "May 2026",
                       title: "Selection Process",
                       desc: "Written tests, group discussions, and personal interviews",
                       status: "upcoming"
                     },
                     {
-                      month: "Jun 2025",
+                      month: "Jun 2026",
                       title: "Results & Admission",
                       desc: "Final results declaration and admission confirmation",
                       status: "upcoming"
                     },
                     {
-                      month: "Jul 2025",
+                      month: "Jul 2026",
                       title: "Classes Begin",
                       desc: "Orientation program and commencement of academic year",
                       status: "upcoming"

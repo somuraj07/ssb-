@@ -169,7 +169,16 @@ export default function AboutChairperson() {
                 </div>
               </div>
             </div>
-
+              <div>
+                <div>
+                  <h1 className="text-2xl font-bold text-center mb-4">Principal's Message</h1>
+                  <p className="text-center text-lg text-gray-700">
+                    At Sanskrithi School of Business, we are dedicated to nurturing the next generation of business leaders. 
+                    Our focus on academic excellence, industry relevance, and ethical leadership prepares our students 
+                    to excel in a rapidly changing global business environment.
+                  </p>
+                </div>
+              </div>
             {/* Vision & Leadership Philosophy */}
             <div className="panel">
               <h2 style={{ color: 'var(--text)', textAlign: 'center', marginBottom: '2rem' }} className="text-xl sm:text-2xl">

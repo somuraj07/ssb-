@@ -192,7 +192,7 @@ export default function ViksitBharat2047() {
               <h2>Future Roadmap</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="card">
-                  <h3>2025 Goals</h3>
+                  <h3>2026 Goals</h3>
                   <ul className="text-sm space-y-1">
                     <li>• Establish Center of Excellence in AI</li>
                     <li>• Launch 50 industry-sponsored projects</li>

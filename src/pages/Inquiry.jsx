@@ -326,9 +326,9 @@ export default function Inquiry() {
               >
                 <h3 className="font-bold text-[var(--text)] mb-4">Quick Contact</h3>
                 <div className="space-y-3 text-sm text-[var(--text-soft)]">
-                  <a href="mailto:enquiry@sanskrithibschool.com" className="flex items-center gap-3 hover:text-[var(--brand)] transition-colors">
+                  <a href="mailto:admissions.director@sanskrithibschool.com" className="flex items-center gap-3 hover:text-[var(--brand)] transition-colors">
                     <Mail className="w-5 h-5 text-[var(--brand)]" />
-                    enquiry@sanskrithibschool.com
+                    admissions.director@sanskrithibschool.com
                   </a>
                   <a href="tel:+919100064545" className="flex items-center gap-3 hover:text-[var(--brand)] transition-colors">
                     <Phone className="w-5 h-5 text-[var(--brand)]" />

@@ -39,10 +39,10 @@ export default function ExaminationCalendar() {
                 <div className="card">
                   <h4 className="font-semibold mb-3">Even Semester (January - June)</h4>
                   <ul className="space-y-2 text-sm">
-                    <li><strong>Mid-term Exams:</strong> March 15-25, 2025</li>
-                    <li><strong>Internal Assessment:</strong> April 15-30, 2025</li>
-                    <li><strong>End Semester Exams:</strong> May 15-30, 2025</li>
-                    <li><strong>Result Declaration:</strong> June 15, 2025</li>
+                    <li><strong>Mid-term Exams:</strong> March 15-25, 2026</li>
+                    <li><strong>Internal Assessment:</strong> April 15-30, 2026</li>
+                    <li><strong>End Semester Exams:</strong> May 15-30, 2026</li>
+                    <li><strong>Result Declaration:</strong> June 15, 2026</li>
                   </ul>
                 </div>
               </div>

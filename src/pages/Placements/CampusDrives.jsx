@@ -57,28 +57,28 @@ export default function CampusDrives() {
                   <tbody>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3">TechCorp Solutions</td>
-                      <td className="p-3">March 15, 2025</td>
+                      <td className="p-3">March 15, 2026</td>
                       <td className="p-3">Business Analyst, Marketing Executive</td>
                       <td className="p-3">MBA/PGDM</td>
                       <td className="p-3">6.5 - 8.5</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3">Global Finance Ltd.</td>
-                      <td className="p-3">March 18, 2025</td>
+                      <td className="p-3">March 18, 2026</td>
                       <td className="p-3">Financial Analyst, Investment Advisor</td>
                       <td className="p-3">MBA Finance</td>
                       <td className="p-3">7.0 - 9.0</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3">InnovateTech</td>
-                      <td className="p-3">March 22, 2025</td>
+                      <td className="p-3">March 22, 2026</td>
                       <td className="p-3">Management Trainee, HR Executive</td>
                       <td className="p-3">All Programs</td>
                       <td className="p-3">5.5 - 7.5</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3">MarketPro Agency</td>
-                      <td className="p-3">March 25, 2025</td>
+                      <td className="p-3">March 25, 2026</td>
                       <td className="p-3">Digital Marketing Specialist</td>
                       <td className="p-3">MBA Marketing</td>
                       <td className="p-3">6.0 - 8.0</td>

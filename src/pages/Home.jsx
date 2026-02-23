@@ -234,7 +234,7 @@ export default function Home() {
             />
             <Facility
               title="Technology Labs"
-              img={homeImg2}
+              img="/src/assets/techonologylabphoto.jpeg"
               points={["Analytics suites", "AI sandbox", "Prototyping"]}
             />
             <Facility
@@ -255,7 +255,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(900px_400px_at_50%_10%,rgba(203,181,139,0.12),transparent)] pointer-events-none" />
         <div className="container mx-auto px-4 max-w-5xl text-center">
           <h2 className="text-3xl md:text-4xl font-semibold text-[var(--text)]">
-            Admissions 2025 Now Open
+            Admissions 2026 Now Open
           </h2>
           <p className="mt-3 text-[var(--text-muted)]">
             Limited seats with scholarships for high performers. Applications
@@ -291,16 +291,16 @@ export default function Home() {
               <div className="grid gap-6">
                 <EventCard
                   type="Upcoming Event"
-                  title="Annual Business Conclave 2025"
-                  date="March 15-16, 2025"
+                  title="Annual Business Conclave 2026"
+                  date="March 15-16, 2026"
                   desc="Join industry leaders and students for two days of inspiring talks, networking sessions, and business competitions."
                   image="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop"
                   link="/campus-life/activities"
                 />
                 <EventCard
                   type="Admission Alert"
-                  title="Final Round of Admissions 2025"
-                  date="Deadline: February 28, 2025"
+                  title="Final Round of Admissions 2026"
+                  date="Deadline: February 28, 2026"
                   desc="Last chance to secure your seat for MBA/PGDM programs. Apply now with merit scholarships available."
                   image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800&auto=format&fit=crop"
                   link="/admissions"
@@ -309,7 +309,7 @@ export default function Home() {
                 <EventCard
                   type="Campus Drive"
                   title="TCS & Deloitte On-Campus Placement"
-                  date="March 8-10, 2025"
+                  date="March 8-10, 2026"
                   desc="Multiple roles available for final year students. Pre-placement talk and selection process."
                   image="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop"
                   link="/placements/campus-drives"

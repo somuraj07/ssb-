@@ -137,7 +137,7 @@ export default function AdmissionsApply() {
                 <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
                   <span className="text-2xl">📅</span>
                 </div>
-                Important Dates 2025
+                Important Dates 2026
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
@@ -148,17 +148,17 @@ export default function AdmissionsApply() {
                   },
                   {
                     title: "Application Deadline",
-                    date: "April 2025",
+                    date: "April 2026",
                     desc: "Last date for form submission"
                   },
                   {
                     title: "Entrance Test",
-                    date: "May 2025",
+                    date: "May 2026",
                     desc: "Institutional entrance examination"
                   },
                   {
                     title: "Results & Interviews",
-                    date: "June 2025",
+                    date: "June 2026",
                     desc: "Interview rounds for shortlisted candidates"
                   }
                 ].map((item, i) => (
@@ -209,7 +209,7 @@ export default function AdmissionsApply() {
                       </div>
                       <div>
                         <p className="text-[var(--text-soft)]">Email</p>
-                        <p className="text-[var(--text)] font-medium">enquiry@sanskrithibschool.com</p>
+                        <p className="text-[var(--text)] font-medium">admissions.director@sanskrithibschool.com</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">

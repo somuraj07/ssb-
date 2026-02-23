@@ -34,10 +34,10 @@ export default function AboutChairperson() {
                     <h3 style={{ marginBottom: '0.5rem', color: 'var(--brand)', fontSize: '1.4em' }}>
                       Dr. Vijay Baskar Reddy
                     </h3>
-                    <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--accent)' }}>
+                    <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(-accent)' }}>
                       Chairperson & Founder
                     </p>
-                    <p style={{ fontSize: '0.9em', color: 'var(--text-muted)', lineHeight: '1.4' }}>
+                    <p style={{ fontSize: '0.9em', color: 'var(--text)', lineHeight: '1.4' }}>
                       Ph.D in Management<br/>
                       IIM Ahmedabad<br/>
                       30+ years experience in<br/>
@@ -45,10 +45,10 @@ export default function AboutChairperson() {
                     </p>
                     
                     <div style={{ marginTop: '2rem', padding: '1rem', background: 'var(--surface-1)', borderRadius: 'var(--radius)', border: '1px solid var(--border-light)' }}>
-                      <div style={{ fontSize: '0.9em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
+                      <div style={{ fontSize: '0.9em', color: 'var(--text)', marginBottom: '0.5rem' }}>
                         Awards & Recognition
                       </div>
-                      <div style={{ fontSize: '0.8em', color: 'var(--text-dim)' }}>
+                      <div style={{ fontSize: '0.8em', color: 'var(--text)' }}>
                         • Excellence in Education Award 2020<br/>
                         • Industry Leadership Recognition<br/>
                         • Academic Excellence Honor<br/>
@@ -57,10 +57,10 @@ export default function AboutChairperson() {
                     </div>
 
                     <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'var(--surface-2)', borderRadius: 'var(--radius)', border: '1px solid var(--border-light)' }}>
-                      <div style={{ fontSize: '0.9em', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
+                      <div style={{ fontSize: '0.9em', color: 'var(--text)', marginBottom: '0.5rem' }}>
                         Professional Experience
                       </div>
-                      <div style={{ fontSize: '0.8em', color: 'var(--text-dim)' }}>
+                      <div style={{ fontSize: '0.8em', color: 'var(--text)' }}>
                         • Former Vice President, TCS<br/>
                         • Board Member, AICTE<br/>
                         • Consultant, Multiple MNCs<br/>

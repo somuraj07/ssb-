@@ -47,33 +47,63 @@ export default function IQAC() {
               </div>
             </div>
 
-            <div className="panel">
-              <h2>IQAC Composition</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold mb-3">Internal Members</h4>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>Chairperson (Senior Administrative Officer)</li>
-                    <li>Vice-Chairperson (Senior Academic Administrator)</li>
-                    <li>Coordinator (Faculty Member)</li>
-                    <li>Faculty Representatives from each department</li>
-                    <li>Administrative Staff Representative</li>
-                    <li>Student Representatives</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold mb-3">External Members</h4>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>Industry Expert/Professional</li>
-                    <li>Education Expert/Academic Leader</li>
-                    <li>Alumni Representative</li>
-                    <li>Local Community Representative</li>
-                    <li>Quality Assurance Specialist</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+           <div className="p-8 bg-gradient-to-t from-[var(--base)]/60 via-transparent to-transparent">
+  {/* Main Header with Green Border */}
+  <div className="mb-10 text-center  py-2 shadow-[4px_4px_0px_rgba(0,0,0,0.1)]">
+    <h2 className="text-3xl font-bold text-[#2E75B6]">
+      IQAC Composition (2025-26)
+    </h2>
+  </div>
+
+  <div className="space-y-4 max-w-5xl mx-auto">
+    {/* Row 1: Chair Person */}
+    <div className="flex gap-4">
+      <div className="w-48 flex items-center justify-center text-center text-white font-bold p-4 rounded-xl  border-gray-300 shadow-lg">
+        Chair Person
+      </div>
+      <div className="flex-1 flex items-center  px-6 py-4 rounded-lg shadow-sm text-lg"style = {{background: 'var(--glass-bg) ', backdropFilter: 'var(--glass-backdrop)'}}>
+        Dr. M. BalaKoteswari, Dean Academics & Principal
+      </div>
+    </div>
+
+    {/* Row 2: Coordinator */}
+    <div className="flex gap-4">
+      <div className="w-48 flex items-center justify-center text-center  text-white font-bold p-4 rounded-xl  border-gray-300 shadow-lg">
+        IQAC Co-coordinator
+      </div>
+      <div className="flex-1 flex items-center bg-gradient-to-b px-6 py-4 rounded-lg shadow-sm text-lg" style = {{background: 'var(--glass-bg) ', backdropFilter: 'var(--glass-backdrop)'}}>
+        <ul className="list-disc list-inside">
+          <li>Mrs. A. Aradhana, HOD & Associate Professor</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Row 3: Admin Officer */}
+    <div className="flex gap-4">
+      <div className="w-48 flex items-center justify-center text-center  to-[#00B0F0] text-white font-bold p-4 rounded-xl  border-gray-300 shadow-lg ">
+        Senior Administrative Officer
+      </div>
+      <div className="flex-1 flex items-center  px-6 py-4 rounded-lg shadow-sm text-lg"style = {{background: 'var(--glass-bg) ', backdropFilter: 'var(--glass-backdrop)'}}>
+        <ul className="list-disc list-inside">
+          <li>Mr. Lingamaiah</li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Row 4: Senior Professors */}
+    <div className="flex gap-4">
+      <div className="w-48 flex items-center text-white justify-center text-center  text-black font-bold p-4 rounded-xl  border-gray-300 shadow-lg">
+        Senior Professors
+      </div>
+      <div className="flex-1 flex flex-col justify-center  px-6 py-4 rounded-lg shadow-sm text-lg"style = {{background: 'var(--glass-bg) ', backdropFilter: 'var(--glass-backdrop)'}}>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Dr. Bhabani Shankar, Associate Professor</li>
+          <li>E. Prashanthi. COE, Admission Director and Associate Professor.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+         </div>
 
             <div className="panel">
               <h2>Key Functions</h2>

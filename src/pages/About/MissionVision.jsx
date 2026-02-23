@@ -219,7 +219,7 @@ export default function MissionVision() {
                     transition: 'all var(--transition-medium)'
                   }} className="hover:transform hover:translate-y-[-4px] hover:shadow-[var(--shadow-medium)]">
                     <div style={{ fontSize: '3em', marginBottom: '1rem' }}>{component.icon}</div>
-                    <h4 style={{ color: 'var(--accent)', fontSize: '1.2em', fontWeight: 'bold', marginBottom: '1rem' }}>
+                    <h4 style={{ color: 'var(--brand)', fontSize: '1.2em', fontWeight: 'bold', marginBottom: '1rem' }}>
                       {component.title}
                     </h4>
                     <p style={{ color: 'var(--text-soft)', lineHeight: '1.6' }}>

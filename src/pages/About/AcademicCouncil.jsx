@@ -34,7 +34,7 @@ export default function AcademicCouncil() {
     {
       name: "Prof. Priya Sharma",
       position: "Head - PGDM Program",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b9b73b8e?q=80&w=400&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1739967350392-7967c8f4ee0a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHByb2Zlc3Npb25hbCUyMGVtcGxveWVlJTIwbGFkaWVzJTIwaW1hZ2VzfGVufDB8fDB8fHww",
       qualification: "Ph.D in Business Analytics, IIT Delhi",
       role: "PGDM Academic Innovation"
     },

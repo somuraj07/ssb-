@@ -47,7 +47,7 @@ export default function IQAC() {
               </div>
             </div>
 
-           <div className="p-8 bg-gradient-to-t from-[var(--base)]/60 via-transparent to-transparent">
+  <div className="p-8 rounded-lg bg-gradient-to-t from-[var(--base)]/60 via-transparent to-transparent">
   {/* Main Header with Green Border */}
   <div className="mb-10 text-center  py-2 shadow-[4px_4px_0px_rgba(0,0,0,0.1)]">
     <h2 className="text-3xl font-bold text-[#2E75B6]">

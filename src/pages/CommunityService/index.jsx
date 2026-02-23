@@ -41,6 +41,7 @@ const programSections = [
         </div>
       </>
     )
+   
   },
   {
     id: 'green',
@@ -128,6 +129,7 @@ function ProgramAccordionItem({ item, isOpen, onToggle }) {
         </div>
         {isOpen ? <ChevronUp className="w-5 h-5 text-[var(--brand)]" /> : <ChevronDown className="w-5 h-5 text-[var(--text-muted)]" />}
       </button>
+
       {isOpen && (
         <div className="pt-4 mt-4 border-t border-[var(--border-light)]">
           <div className="text-[var(--text-soft)]">{item.content}</div>

@@ -89,10 +89,10 @@ export default function Library() {
   ];
 
   const operatingHours = [
-    { day: "Monday - Friday", hours: "8:00 AM - 8:00 PM" },
-    { day: "Saturday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Sunday", hours: "10:00 AM - 5:00 PM" },
-    { day: "Exam Period", hours: "Extended Hours till 10:00 PM" }
+    { day: "Monday - Friday", hours: "09:45 AM - 04:35 PM" },
+    { day: "Saturday", hours: "09:00 AM - 06:00 PM" },
+    { day: "Sunday", hours: "10:00 AM - 1:00 PM" },
+    { day: "Exam Period", hours: "Extended Hours till 05:00 PM" }
   ];
 
   return (

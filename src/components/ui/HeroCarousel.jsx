@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import home1 from '../../assets/home/20260202_121419.jpg';
 import home2 from '../../assets/home/20260202_121633.jpg';
 import home3 from '../../assets/home/20260202_122858.jpg';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/SSb.svg';
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

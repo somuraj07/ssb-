@@ -151,11 +151,6 @@ export const NAV = [
         description: 'On-campus accommodation facilities'
       },
       { 
-        label: 'Cafeteria', 
-        href: '/campus-life/cafeteria',
-        description: 'Dining and food services'
-      },
-      { 
         label: 'Computer Centre', 
         href: '/campus-life/computer-centre',
         description: 'IT infrastructure and computer labs'
@@ -227,12 +222,6 @@ export const NAV = [
         label: 'MOUs & Collaborations', 
         href: '/placements/mous',
         description: 'Industry partnerships and collaborations'
-      },
-     
-      { 
-        label: 'e Learning', 
-        href: '/placements/elearning',
-        description: 'Online learning resources and platforms'
       },
       { 
         label: 'Internships', 

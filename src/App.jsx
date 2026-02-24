@@ -3,7 +3,7 @@ import { Link, Routes, Route, useLocation } from 'react-router-dom';
 import Footer from './components/Layout/Footer.jsx';
 import MobileNavigation from './components/Layout/MobileNavigation.jsx';
 import routes from './routes.jsx';
-import logo from './assets/logo.png';
+
 
 // Scroll to top component
 function ScrollToTop() {

@@ -4,44 +4,38 @@ import SectionHeader from '../../components/ui/SectionHeader';
 export default function AcademicCouncil() {
   const councilMembers = [
     {
-      name: "Dr. Srinivas Reddy",
+      name: "B. Vijaya Bhaskar Reddy",
       position: "Chairperson - Academic Council",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop",
       qualification: "Ph.D in Management, IIM Ahmedabad",
       role: "Strategic Academic Leadership & Vision"
     },
     {
       name: "Dr. M. Balakoteswari",
       position: "Dean - Academic Affairs",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop",
       qualification: "Ph.D in Organizational Behavior",
       role: "Academic Program Oversight"
     },
     {
       name: "Prof. B. Durga Prasad",
       position: "Academic Council Representative",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
       qualification: "Ph.D in Business Management",
       role: "Curriculum Development & Research"
     },
     {
       name: "Dr. Rajesh Kumar",
       position: "Head - MBA Program",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
       qualification: "Ph.D in Finance, IIM Bangalore",
       role: "MBA Academic Excellence"
     },
     {
       name: "Prof. Priya Sharma",
       position: "Head - PGDM Program",
-      image: "https://images.unsplash.com/photo-1739967350392-7967c8f4ee0a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHByb2Zlc3Npb25hbCUyMGVtcGxveWVlJTIwbGFkaWVzJTIwaW1hZ2VzfGVufDB8fDB8fHww",
       qualification: "Ph.D in Business Analytics, IIT Delhi",
       role: "PGDM Academic Innovation"
     },
     {
       name: "Dr. Suresh Reddy",
       position: "Head - Research & Development",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop",
       qualification: "Ph.D in Strategic Management",
       role: "Research Initiatives & Publications"
     }
@@ -89,7 +83,7 @@ export default function AcademicCouncil() {
             subtitle="Academic governance and oversight"
             description="The apex academic body responsible for maintaining excellence in education and research"
           />
-          
+
           <div className="space-y-section">
             {/* Introduction */}
             <div className="panel">
@@ -97,12 +91,12 @@ export default function AcademicCouncil() {
                 <h2 className="text-xl sm:text-2xl md:text-3xl" style={{ color: 'var(--text)', marginBottom: '2rem' }}>
                   Academic Excellence & Governance
                 </h2>
-                <p className="text-base sm:text-lg max-w-3xl mx-auto px-2 sm:px-0" style={{ 
-                  color: 'var(--text-soft)', 
+                <p className="text-base sm:text-lg max-w-3xl mx-auto px-2 sm:px-0" style={{
+                  color: 'var(--text-soft)',
                   lineHeight: '1.7'
                 }}>
-                  The Academic Council serves as the premier academic authority at SSB Puttaparthi, 
-                  responsible for formulating academic policies, ensuring quality standards, and 
+                  The Academic Council serves as the premier academic authority at SSB Puttaparthi,
+                  responsible for formulating academic policies, ensuring quality standards, and
                   driving innovation in management education.
                 </p>
               </div>
@@ -115,7 +109,7 @@ export default function AcademicCouncil() {
                     Strategic oversight of all academic programs and initiatives
                   </p>
                 </div>
-                
+
                 <div className="text-center p-4 sm:p-6" style={{ background: 'var(--glass-bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-light)' }}>
                   <div style={{ fontSize: '3em', marginBottom: '1rem' }}>⚖️</div>
                   <h4 style={{ color: 'var(--brand)', marginBottom: '1rem' }}>Quality Assurance</h4>
@@ -123,7 +117,7 @@ export default function AcademicCouncil() {
                     Ensuring highest standards in curriculum and delivery
                   </p>
                 </div>
-                
+
                 <div className="text-center p-4 sm:p-6" style={{ background: 'var(--glass-bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-light)' }}>
                   <div style={{ fontSize: '3em', marginBottom: '1rem' }}>🎯</div>
                   <h4 style={{ color: 'var(--brand)', marginBottom: '1rem' }}>Strategic Vision</h4>
@@ -139,7 +133,7 @@ export default function AcademicCouncil() {
               <h2 className="text-lg sm:text-xl md:text-2xl text-center mb-6 sm:mb-8 md:mb-12" style={{ color: 'var(--text)' }}>
                 Academic Council Members
               </h2>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {councilMembers.map((member, index) => (
                   <div key={index} className="p-4 sm:p-6 text-center hover:transform hover:translate-y-[-4px] hover:shadow-[var(--shadow-medium)]" style={{
@@ -151,7 +145,7 @@ export default function AcademicCouncil() {
                     position: 'relative',
                     overflow: 'hidden'
                   }}>
-                    
+
                     <div style={{
                       position: 'absolute',
                       top: '-40px',
@@ -161,27 +155,20 @@ export default function AcademicCouncil() {
                       background: 'radial-gradient(circle, var(--brand)15, transparent)',
                       borderRadius: '50%'
                     }} />
-                    
-                    <img 
-                      src={member.image}
-                      alt={member.name}
-                      className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-cover rounded-full mx-auto mb-4 md:mb-6 block relative z-[1] border-[3px] border-[var(--brand)]"
-                    />
-                    
-                    <h3 style={{ 
-                      color: 'var(--text)', 
-                      fontSize: '1.2em', 
-                      fontWeight: 'bold', 
+                    <h3 style={{
+                      color: 'var(--text)',
+                      fontSize: '1.2em',
+                      fontWeight: 'bold',
                       marginBottom: '0.5rem',
                       position: 'relative',
                       zIndex: 1
                     }}>
                       {member.name}
                     </h3>
-                    
-                    <p style={{ 
-                      color: 'var(--brand)', 
-                      fontWeight: 'bold', 
+
+                    <p style={{
+                      color: 'var(--brand)',
+                      fontWeight: 'bold',
                       marginBottom: '0.5rem',
                       fontSize: '0.95em',
                       position: 'relative',
@@ -189,9 +176,9 @@ export default function AcademicCouncil() {
                     }}>
                       {member.position}
                     </p>
-                    
-                    <p style={{ 
-                      color: 'var(--text-soft)', 
+
+                    <p style={{
+                      color: 'var(--text-soft)',
                       fontSize: '0.85em',
                       marginBottom: '1rem',
                       fontStyle: 'italic',
@@ -200,7 +187,7 @@ export default function AcademicCouncil() {
                     }}>
                       {member.qualification}
                     </p>
-                    
+
                     <div style={{
                       background: 'var(--surface-1)',
                       padding: '0.75rem',
@@ -209,8 +196,8 @@ export default function AcademicCouncil() {
                       position: 'relative',
                       zIndex: 1
                     }}>
-                      <p style={{ 
-                        color: 'var(--text-dim)', 
+                      <p style={{
+                        color: 'var(--text-dim)',
                         fontSize: '0.8em',
                         fontWeight: '600'
                       }}>
@@ -227,7 +214,7 @@ export default function AcademicCouncil() {
               <h2 className="text-lg sm:text-xl md:text-2xl text-center mb-6 sm:mb-8 md:mb-12" style={{ color: 'var(--text)' }}>
                 Key Responsibilities
               </h2>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {responsibilities.map((responsibility, index) => (
                   <div key={index} className="p-4 sm:p-6 text-center hover:transform hover:translate-y-[-2px] hover:shadow-[var(--shadow-soft)]" style={{
@@ -237,15 +224,15 @@ export default function AcademicCouncil() {
                     borderRadius: 'var(--radius-lg)',
                     transition: 'all var(--transition-medium)'
                   }}>
-                    
+
                     <div style={{ fontSize: '3.5em', marginBottom: '1rem' }}>
                       {responsibility.icon}
                     </div>
-                    <h4 style={{ 
-                      color: 'var(--brand)', 
-                      fontSize: '1.3em', 
-                      fontWeight: 'bold', 
-                      marginBottom: '1rem' 
+                    <h4 style={{
+                      color: 'var(--brand)',
+                      fontSize: '1.3em',
+                      fontWeight: 'bold',
+                      marginBottom: '1rem'
                     }}>
                       {responsibility.title}
                     </h4>
@@ -265,7 +252,7 @@ export default function AcademicCouncil() {
               <h2 className="text-lg sm:text-xl md:text-2xl text-center mb-6 sm:mb-8 md:mb-12" style={{ color: 'var(--text)' }}>
                 Council Operations
               </h2>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 <div className="p-4 sm:p-6" style={{
                   background: 'var(--glass-bg)',
@@ -284,7 +271,7 @@ export default function AcademicCouncil() {
                     <li style={{ marginBottom: '0.5rem' }}>• Special Sessions as needed</li>
                   </ul>
                 </div>
-                
+
                 <div className="p-4 sm:p-6" style={{
                   background: 'var(--glass-bg)',
                   backdropFilter: 'var(--glass-backdrop)',
@@ -302,7 +289,7 @@ export default function AcademicCouncil() {
                     <li style={{ marginBottom: '0.5rem' }}>• Quality Standards</li>
                   </ul>
                 </div>
-                
+
                 <div className="p-4 sm:p-6" style={{
                   background: 'var(--glass-bg)',
                   backdropFilter: 'var(--glass-backdrop)',

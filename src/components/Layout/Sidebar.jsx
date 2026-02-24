@@ -176,7 +176,7 @@ export default function Sidebar() {
                                 }`}
                             >
                               <div className={`w-2 h-2 rounded-full mr-3 ${isChildActive ? 'bg-[var(--brand)]' : 'bg-gray-400'}`}></div>
-                              {child.label}
+                              {child.label}dgfdghdfdgf
                             </Link>
                           );
                         })}

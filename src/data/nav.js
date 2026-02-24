@@ -248,11 +248,6 @@ export const NAV = [
     description: 'Institutional committees and governance',
     children: [
       { 
-        label: 'IQAC', 
-        href: '/committees/iqac',
-        description: 'Internal Quality Assurance Cell'
-      },
-      { 
         label: 'Anti Ragging', 
         href: '/committees/anti-ragging',
         description: 'Anti-ragging measures and reporting'

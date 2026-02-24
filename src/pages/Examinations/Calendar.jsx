@@ -11,16 +11,67 @@ export default function ExaminationCalendar() {
             subtitle="Examination schedule and important dates"
             description="Complete schedule of examinations and academic activities"
           />
-          
+
           <div className="space-y-section">
             <div className="panel">
-              <h2>Academic Year 2024-25</h2>
-              <p>
-                The academic calendar outlines all important examination dates, 
-                submission deadlines, and academic activities for the current year. 
-                Students are advised to refer to this calendar regularly for planning 
-                their study schedule and meeting important deadlines.
+              <h2 className="text-xl font-semibold mb-2">
+                Academic Year 2024-25
+              </h2>
+
+              <p className="mb-4 text-[var(--text-soft)]">
+                The academic calendar outlines all important examination dates,
+                submission deadlines, and academic activities for the current year.
+                Students are advised to refer to this calendar regularly.
               </p>
+
+              {/* PDF LIST */}
+              <div className="space-y-3">
+
+                <div className="flex items-center justify-between border p-3 rounded-lg">
+                  <span>2025 I & II Sem Academic Calendar MBA Autonomous Batch</span>
+                  <a
+                    href="\pdf\2025 I & II Sem Academic Calender MBA Autonomous Batch.docx"
+                    download
+                    className="bg-sky-700 text-white px-3 py-1.5 rounded-md text-sm hover:bg-sky-800"
+                  >
+                    Download
+                  </a>
+                </div>
+
+                <div className="flex items-center justify-between border p-3 rounded-lg">
+                  <span>2025 I & II Sem Academic Calendar BBA Autonomous Batch</span>
+                  <a
+                    href="\pdf\2025 I & II Sem Academic Calender BBA Autonomous Batch.docx"
+                    download
+                    className="bg-sky-700 text-white px-3 py-1.5 rounded-md text-sm hover:bg-sky-800"
+                  >
+                    Download
+                  </a>
+                </div>
+
+                <div className="flex items-center justify-between border p-3 rounded-lg">
+                  <span>2025 Academic Calendar MBA Autonomous Batch</span>
+                  <a
+                    href="\pdf\2025 Academic Calender MBA Autonomous Batch.pdf"
+                    download
+                    className="bg-sky-700 text-white px-3 py-1.5 rounded-md text-sm hover:bg-sky-800"
+                  >
+                    Download
+                  </a>
+                </div>
+
+                <div className="flex items-center justify-between border p-3 rounded-lg">
+                  <span>2025 Academic Calendar BBA Autonomous Batch</span>
+                  <a
+                    href="\pdf\2025 Academic Calender BBA Autonomous Batch.pdf"
+                    download
+                    className="bg-sky-700 text-white px-3 py-1.5 rounded-md text-sm hover:bg-sky-800"
+                  >
+                    Download
+                  </a>
+                </div>
+
+              </div>
             </div>
 
             <div className="panel">
@@ -35,7 +86,7 @@ export default function ExaminationCalendar() {
                     <li><strong>Result Declaration:</strong> December 30, 2024</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-3">Even Semester (January - June)</h4>
                   <ul className="space-y-2 text-sm">
@@ -98,8 +149,8 @@ export default function ExaminationCalendar() {
             <div className="panel">
               <h2>Holiday Schedule</h2>
               <p>
-                Examinations will not be conducted on national holidays, regional festivals, 
-                and declared holidays by the institution. Alternative dates will be announced 
+                Examinations will not be conducted on national holidays, regional festivals,
+                and declared holidays by the institution. Alternative dates will be announced
                 for any postponed examinations due to unforeseen circumstances.
               </p>
             </div>

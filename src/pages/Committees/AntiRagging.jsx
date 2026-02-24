@@ -11,14 +11,14 @@ export default function AntiRagging() {
             subtitle="Creating a safe and supportive campus environment"
             description="Zero tolerance policy against ragging and harassment"
           />
-          
+
           <div className="space-y-section">
             <div className="panel">
               <h2>About Anti-Ragging Committee</h2>
               <p>
-                The Anti-Ragging Committee is constituted as per the directions of the 
-                Hon'ble Supreme Court of India and UGC regulations to prevent and address 
-                any incidents of ragging in the institution. The committee is committed 
+                The Anti-Ragging Committee is constituted as per the directions of the
+                Hon'ble Supreme Court of India and UGC regulations to prevent and address
+                any incidents of ragging in the institution. The committee is committed
                 to maintaining a healthy, safe, and supportive environment for all students.
               </p>
             </div>
@@ -35,7 +35,7 @@ export default function AntiRagging() {
                     <li>Any act causing physical harm or discomfort</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">🗣️ Verbal/Psychological Ragging</h4>
                   <ul className="list-disc list-inside space-y-1 text-xs">
@@ -45,7 +45,7 @@ export default function AntiRagging() {
                     <li>Discriminatory comments or remarks</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">💻 Cyber Ragging</h4>
                   <ul className="list-disc list-inside space-y-1 text-xs">
@@ -55,7 +55,7 @@ export default function AntiRagging() {
                     <li>Digital threats or blackmail</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">🚫 Other Forms</h4>
                   <ul className="list-disc list-inside space-y-1 text-xs">
@@ -83,33 +83,33 @@ export default function AntiRagging() {
                   <tbody>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Chairperson</td>
-                      <td className="p-3">Dr. [Name]</td>
+                      <td className="p-3">Dr. Bala Koteswari</td>
                       <td className="p-3">Director/Principal</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-9100974516</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Coordinator</td>
-                      <td className="p-3">Prof. [Name]</td>
+                      <td className="p-3">Prof. Prashanthi</td>
                       <td className="p-3">Faculty Coordinator</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-8186041091</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Faculty Member</td>
-                      <td className="p-3">Dr. [Name]</td>
+                      <td className="p-3">Dr. Girish</td>
                       <td className="p-3">Department Representative</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-63630 73453</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Student Representative</td>
-                      <td className="p-3">[Student Name]</td>
+                      <td className="p-3">Meghana</td>
                       <td className="p-3">Student Council Member</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-9000387028</td>
                     </tr>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Non-Teaching Staff</td>
-                      <td className="p-3">Mr./Ms. [Name]</td>
+                      <td className="p-3">Mr./Ms. Sreenu</td>
                       <td className="p-3">Administrative Officer</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91-97011 45900</td>
                     </tr>
                   </tbody>
                 </table>
@@ -128,7 +128,7 @@ export default function AntiRagging() {
                     <li>Guest lectures on student rights</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Monitoring Systems</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
@@ -138,7 +138,7 @@ export default function AntiRagging() {
                     <li>Peer support networks</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Communication Channels</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
@@ -163,7 +163,7 @@ export default function AntiRagging() {
                     <p><strong>Email:</strong> antiragging@ssbputtaparthi.edu.in</p>
                   </div>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">📧 Online Reporting</h4>
                   <p className="text-sm mb-3">Secure and confidential reporting</p>
@@ -188,7 +188,7 @@ export default function AntiRagging() {
                     <li>Medical assistance if required</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-3">Disciplinary Actions</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
@@ -227,7 +227,7 @@ export default function AntiRagging() {
                     <li>Peer counseling programs</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">🏥 Medical Assistance</h4>
                   <ul className="list-disc list-inside space-y-1 text-xs">
@@ -237,7 +237,7 @@ export default function AntiRagging() {
                     <li>Tie-ups with nearby hospitals</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">🏛️ Legal Aid</h4>
                   <ul className="list-disc list-inside space-y-1 text-xs">
@@ -255,10 +255,10 @@ export default function AntiRagging() {
               <div className="bg-blue-50 border border-blue-200 p-4 rounded">
                 <h4 className="font-semibold mb-2">Anti-Ragging Pledge</h4>
                 <p className="text-sm italic">
-                  "I hereby pledge that I will not engage in, encourage, or support any form 
-                  of ragging. I understand that ragging is prohibited and is a criminal offense. 
-                  I promise to report any incident of ragging that comes to my knowledge and 
-                  will actively work towards creating a safe and supportive campus environment 
+                  "I hereby pledge that I will not engage in, encourage, or support any form
+                  of ragging. I understand that ragging is prohibited and is a criminal offense.
+                  I promise to report any incident of ragging that comes to my knowledge and
+                  will actively work towards creating a safe and supportive campus environment
                   for all students."
                 </p>
               </div>
@@ -298,7 +298,7 @@ export default function AntiRagging() {
                     <li>• <a href="#" className="text-[var(--brand)] hover:underline">Anti-Ragging Affidavit Form</a></li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Emergency Contacts</h4>
                   <ul className="space-y-1 text-sm">

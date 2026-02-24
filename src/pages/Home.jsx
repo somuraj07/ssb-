@@ -18,6 +18,7 @@ import logoGenpact from "../assets/companylogos/800px-Genpact_logo.svg.png";
 import logoMphasis from "../assets/companylogos/mphasis-logo (1).png";
 import test1 from "../assets/test1.png";
 import test2 from "../assets/test2.png";
+import lab from "../assets/lab.jpeg";
 /**
  * SSB — Sanskrithi School of Business
  * Home Page (single-file, drop-in)
@@ -234,7 +235,7 @@ export default function Home() {
             />
             <Facility
               title="Technology Labs"
-              img="src/assets/lab.jpeg"
+              img={lab}
               points={["Analytics suites", "AI sandbox", "Prototyping"]}
             />
             <Facility

@@ -117,22 +117,6 @@ export default function AboutOverview() {
                     </div>
                   </div>
                 </div>
-                <div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
-                    alt="Students in Modern Classroom"
-                    style={{
-                      width: '100%',
-                      height: '300px',
-                      objectFit: 'cover',
-                      borderRadius: '12px',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
-                    }}
-                  />
-                  <p style={{ textAlign: 'center', marginTop: '0.5rem', fontSize: '0.9em', color: 'var(--text-muted)' }}>
-                    Modern learning environment fostering innovation
-                  </p>
-                </div>
               </div>
             </div>
 

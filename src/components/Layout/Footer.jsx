@@ -22,7 +22,6 @@ export default function Footer() {
           <div className="text-white font-medium">Resources</div>
           <ul className="mt-2 space-y-2">
             <li><Link to="/examinations/downloads" className="hover:text-white">Downloads</Link></li>
-            <li><Link to="/examinations/question-papers" className="hover:text-white">Question Papers</Link></li>
             <li><Link to="/admissions/fee-payment" className="hover:text-white">Fee Payment</Link></li>
             <li><Link to="/committees/iqac" className="hover:text-white">IQAC</Link></li>
           </ul>

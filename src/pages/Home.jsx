@@ -4,8 +4,8 @@ import progMba from "../assets/programes/11111.jpg";
 import progPgdm from "../assets/programes/22222.jpg";
 import progBba from "../assets/programes/33333.jpg";
 import homeCampus from "../assets/home/20260202_121419.jpg";
-import homeImg2 from "../assets/home/20260202_121633.jpg";
-import homeImg3 from "../assets/home/20260202_122858.jpg";
+import libraryImg from "../assets/home/Library.jpeg";
+import sportsImg from "../assets/home/Sports.jpeg"
 import logoTCS from "../assets/companylogos/Tata_Consultancy_Services_Logo.svg.png";
 import logoDeloitte from "../assets/companylogos/Deloitte_Logo.png";
 import logoAccenture from "../assets/companylogos/Accenture.svg.png";
@@ -230,7 +230,7 @@ export default function Home() {
           <div className="mt-8 grid lg:grid-cols-3 gap-6">
             <Facility
               title="Library & Research"
-              img={homeCampus}
+              img={libraryImg}
               points={["Digital journals", "Quiet pods", "Late hours"]}
             />
             <Facility
@@ -240,7 +240,7 @@ export default function Home() {
             />
             <Facility
               title="Residential & Sports"
-              img={homeImg3}
+              img={sportsImg}
               points={[
                 "On-campus hostels",
                 "Ground & courts",

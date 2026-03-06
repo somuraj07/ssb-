@@ -262,11 +262,6 @@ export const NAV = [
         description: 'Student grievance handling and resolution'
       },
       {
-        label: 'NPTEL',
-        href: '/committees/nptel',
-        description: 'NPTEL local chapter activities and support'
-      },
-      {
         label: 'Academic Committee',
         href: '/committees/academic',
         description: 'Academic governance and oversight'

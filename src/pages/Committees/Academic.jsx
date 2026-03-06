@@ -11,14 +11,14 @@ export default function AcademicCommittee() {
             subtitle="Academic governance and oversight"
             description="Ensuring academic excellence and maintaining quality standards"
           />
-          
+
           <div className="space-y-section">
             <div className="panel">
               <h2>About the Academic Committee</h2>
               <p>
-                The College Academic Committee serves as the primary governing body for 
-                all academic matters within the institution. It ensures the maintenance 
-                of high academic standards, oversees curriculum development, and makes 
+                The College Academic Committee serves as the primary governing body for
+                all academic matters within the institution. It ensures the maintenance
+                of high academic standards, oversees curriculum development, and makes
                 key decisions regarding academic policies and procedures.
               </p>
             </div>
@@ -33,6 +33,7 @@ export default function AcademicCommittee() {
 
             <div className="panel">
               <h2>Committee Composition</h2>
+
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
@@ -43,42 +44,46 @@ export default function AcademicCommittee() {
                       <th className="text-left p-3">Department</th>
                     </tr>
                   </thead>
+
                   <tbody>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Chairperson</td>
-                      <td className="p-3">Dr. [Name]</td>
-                      <td className="p-3">Director/Principal</td>
+                      <td className="p-3">Dr. Balakoteshwari</td>
+                      <td className="p-3">Dean & Principal</td>
                       <td className="p-3">Administration</td>
                     </tr>
+
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Vice-Chairperson</td>
-                      <td className="p-3">Dr. [Name]</td>
-                      <td className="p-3">Dean Academic Affairs</td>
+                      <td className="p-3">Dr. Bhabani Shankar Pandhy</td>
+                      <td className="p-3">Vice-Chairperson</td>
                       <td className="p-3">Administration</td>
                     </tr>
+
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Secretary</td>
-                      <td className="p-3">Prof. [Name]</td>
-                      <td className="p-3">Registrar</td>
+                      <td className="p-3">E. Prashanthi</td>
+                      <td className="p-3">Secretary</td>
                       <td className="p-3">Administration</td>
                     </tr>
+
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">HOD Representative</td>
-                      <td className="p-3">Dr. [Name]</td>
-                      <td className="p-3">Head of Department</td>
-                      <td className="p-3">Business Administration</td>
+                      <td className="p-3">A. Aradhana</td>
+                      <td className="p-3">HOD Representative</td>
+                      <td className="p-3">Department</td>
                     </tr>
+
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Faculty Representative</td>
-                      <td className="p-3">Dr. [Name]</td>
-                      <td className="p-3">Senior Faculty</td>
-                      <td className="p-3">Management Studies</td>
+                      <td className="p-3">Mr. B. Girish Babu</td>
+                      <td className="p-3">Faculty Representative</td>
+                      <td className="p-3">Department</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-
             <div className="panel">
               <h2>Key Responsibilities</h2>
               <div className="grid md:grid-cols-3 gap-6">
@@ -91,7 +96,7 @@ export default function AcademicCommittee() {
                     <li>Academic calendar preparation</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">👩‍🏫 Faculty Affairs</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
@@ -101,7 +106,7 @@ export default function AcademicCommittee() {
                     <li>Performance evaluation criteria</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">🎓 Student Affairs</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
@@ -127,7 +132,7 @@ export default function AcademicCommittee() {
                     <li>Research methodology enhancement</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">💻 Technology Integration</h4>
                   <ul className="list-disc list-inside space-y-1 text-xs">
@@ -153,7 +158,7 @@ export default function AcademicCommittee() {
                     <li>Emergency meetings for urgent matters</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-3">📋 Recent Decisions</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">

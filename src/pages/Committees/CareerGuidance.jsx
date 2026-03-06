@@ -11,15 +11,15 @@ export default function CareerGuidance() {
             subtitle="Guiding students towards successful career paths"
             description="Comprehensive career counseling and higher education support"
           />
-          
+
           <div className="space-y-section">
             <div className="panel">
               <h2>About Career Guidance Cell</h2>
               <p>
-                The Career Guidance & Higher Education Cell provides comprehensive 
-                support to students in making informed career decisions and pursuing 
-                higher education opportunities. We offer personalized counseling, 
-                career assessment, and guidance for various career paths and 
+                The Career Guidance & Higher Education Cell provides comprehensive
+                support to students in making informed career decisions and pursuing
+                higher education opportunities. We offer personalized counseling,
+                career assessment, and guidance for various career paths and
                 educational options.
               </p>
             </div>
@@ -37,7 +37,7 @@ export default function CareerGuidance() {
                     <li>Career path planning</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">🎓 Higher Education Guidance</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
@@ -48,7 +48,7 @@ export default function CareerGuidance() {
                     <li>Study abroad counseling</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">💼 Industry Connect</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
@@ -76,7 +76,7 @@ export default function CareerGuidance() {
                     <li>Human Resources Management</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">🚀 Entrepreneurship</h4>
                   <ul className="list-disc list-inside space-y-1 text-xs">
@@ -88,7 +88,7 @@ export default function CareerGuidance() {
                     <li>Legal and Regulatory Guidance</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">🎓 Higher Education</h4>
                   <ul className="list-disc list-inside space-y-1 text-xs">
@@ -100,7 +100,7 @@ export default function CareerGuidance() {
                     <li>Distance Learning Options</li>
                   </ul>
                 </div>
-                
+
                 <div className="card">
                   <h4 className="font-semibold mb-2">🏛️ Public Sector</h4>
                   <ul className="list-disc list-inside space-y-1 text-xs">
@@ -117,6 +117,7 @@ export default function CareerGuidance() {
 
             <div className="panel">
               <h2>Committee Team</h2>
+
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
@@ -127,36 +128,39 @@ export default function CareerGuidance() {
                       <th className="text-left p-3">Contact</th>
                     </tr>
                   </thead>
+
                   <tbody>
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Coordinator</td>
-                      <td className="p-3">Dr. [Name]</td>
-                      <td className="p-3">Career Counseling</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">B. Girish Babu</td>
+                      <td className="p-3">International Education</td>
+                      <td className="p-3">+91 6363073453</td>
                     </tr>
+
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Higher Education Advisor</td>
-                      <td className="p-3">Prof. [Name]</td>
+                      <td className="p-3">E. Prashanthi</td>
                       <td className="p-3">International Education</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91 9100974544</td>
                     </tr>
+
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Industry Connect Lead</td>
-                      <td className="p-3">Mr./Ms. [Name]</td>
+                      <td className="p-3">Dr. Bala Koteshwari</td>
                       <td className="p-3">Corporate Relations</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">+91 9100974516</td>
                     </tr>
+
                     <tr className="border-b border-[var(--border-light)]">
                       <td className="p-3 font-semibold">Student Coordinator</td>
-                      <td className="p-3">[Student Name]</td>
-                      <td className="p-3">Peer Counseling</td>
-                      <td className="p-3">+91-XXXX-XXXXXX</td>
+                      <td className="p-3">Mr. Vishwanath</td>
+                      <td className="p-3">Peer Counselling</td>
+                      <td className="p-3">+91 6305808290</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-
             <div className="panel">
               <h2>Workshops & Programs</h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -170,7 +174,7 @@ export default function CareerGuidance() {
                     <li>Personality development sessions</li>
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-3">🎯 Specialized Programs</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">
@@ -219,7 +223,7 @@ export default function CareerGuidance() {
                     <li>Follow-up support as needed</li>
                   </ol>
                 </div>
-                
+
                 <div>
                   <h4 className="font-semibold mb-3">Resources Available</h4>
                   <ul className="list-disc list-inside space-y-1 text-sm">

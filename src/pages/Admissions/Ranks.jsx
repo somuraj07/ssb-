@@ -5,6 +5,14 @@ import Card from '../../components/ui/Card';
 export default function Ranks() {
   const [selectedExam, setSelectedExam] = useState('icet');
 
+  const getRankBadgeLabel = (range) => {
+    if (range.startsWith('Above')) {
+      return 'Above 25K';
+    }
+
+    return range.split(' - ')[0].replace(/,/g, 'K').replace('000', '');
+  };
+
   const entranceExams = {
     icet: {
       name: "AP ICET (Andhra Pradesh Integrated Common Entrance Test)",
@@ -137,10 +145,10 @@ export default function Ranks() {
             <Card>
               <div className="text-center mb-10">
                 <h2 className="text-2xl font-bold text-[var(--text)] mb-6">Select Entrance Category</h2>
-                <div className="flex justify-center gap-6">
+                <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6">
                   <button
                     onClick={() => setSelectedExam('icet')}
-                    className={`px-8 py-4 rounded-xl font-semibold transition-all ${
+                    className={`w-full sm:w-auto px-5 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all ${
                       selectedExam === 'icet'
                         ? 'bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white shadow-lg'
                         : 'bg-[var(--surface-2)] text-[var(--text)] border border-[var(--border-light)] hover:bg-[var(--surface-3)]'
@@ -150,7 +158,7 @@ export default function Ranks() {
                   </button>
                   <button
                     onClick={() => setSelectedExam('national')}
-                    className={`px-8 py-4 rounded-xl font-semibold transition-all ${
+                    className={`w-full sm:w-auto px-5 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all ${
                       selectedExam === 'national'
                         ? 'bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white shadow-lg'
                         : 'bg-[var(--surface-2)] text-[var(--text)] border border-[var(--border-light)] hover:bg-[var(--surface-3)]'
@@ -164,15 +172,15 @@ export default function Ranks() {
 
             {/* Exam Overview */}
             <Card>
-              <h2 className="text-2xl font-bold text-[var(--text)] mb-8 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
+              <h2 className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-xl sm:text-2xl font-bold text-[var(--text)] mb-8">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center shrink-0">
                   <span className="text-2xl">{entranceExams[selectedExam].icon}</span>
                 </div>
-                {entranceExams[selectedExam].name}
+                <span className="leading-tight">{entranceExams[selectedExam].name}</span>
               </h2>
               
               <div className="mb-8">
-                <p className="text-[var(--text-soft)] text-lg leading-relaxed mb-6">
+                <p className="text-[var(--text-soft)] text-base sm:text-lg leading-relaxed mb-6">
                   {entranceExams[selectedExam].description}
                 </p>
                 <div className="p-4 rounded-lg bg-[var(--surface-1)] border border-[var(--border-light)]">
@@ -186,19 +194,19 @@ export default function Ranks() {
                   <div>
                     <h3 className="text-lg font-semibold text-[var(--text)] mb-4">Exam Pattern</h3>
                     <div className="space-y-4">
-                      <div className="flex justify-between items-center p-3 rounded-lg bg-[var(--surface-1)]">
+                      <div className="rank-stat-row flex justify-between items-center gap-3 p-3 rounded-lg bg-[var(--surface-1)]">
                         <span className="text-[var(--text)]">Total Questions</span>
                         <span className="font-semibold text-[var(--text)]">{entranceExams[selectedExam].totalQuestions}</span>
                       </div>
-                      <div className="flex justify-between items-center p-3 rounded-lg bg-[var(--surface-1)]">
+                      <div className="rank-stat-row flex justify-between items-center gap-3 p-3 rounded-lg bg-[var(--surface-1)]">
                         <span className="text-[var(--text)]">Total Marks</span>
                         <span className="font-semibold text-[var(--text)]">{entranceExams[selectedExam].totalMarks}</span>
                       </div>
-                      <div className="flex justify-between items-center p-3 rounded-lg bg-[var(--surface-1)]">
+                      <div className="rank-stat-row flex justify-between items-center gap-3 p-3 rounded-lg bg-[var(--surface-1)]">
                         <span className="text-[var(--text)]">Duration</span>
                         <span className="font-semibold text-[var(--text)]">{entranceExams[selectedExam].duration}</span>
                       </div>
-                      <div className="flex justify-between items-center p-3 rounded-lg bg-[var(--surface-1)]">
+                      <div className="rank-stat-row flex justify-between items-center gap-3 p-3 rounded-lg bg-[var(--surface-1)]">
                         <span className="text-[var(--text)]">Qualifying Marks</span>
                         <span className="font-semibold text-[var(--text)]">{entranceExams[selectedExam].qualifyingMarks}/200</span>
                       </div>
@@ -211,7 +219,7 @@ export default function Ranks() {
                       {entranceExams[selectedExam].sections.map((section, i) => (
                         <div key={i} className="p-4 rounded-lg bg-[var(--surface-1)] border border-[var(--border-light)]">
                           <h4 className="font-semibold text-[var(--text)] mb-2">{section.name}</h4>
-                          <div className="flex justify-between">
+                          <div className="rank-stat-row flex justify-between gap-3">
                             <span className="text-[var(--text-soft)]">Questions: {section.questions}</span>
                             <span className="text-[var(--text-soft)]">Marks: {section.marks}</span>
                           </div>
@@ -253,9 +261,9 @@ export default function Ranks() {
                     >
                       <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                         <div
-                          className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-r ${rank.color} flex items-center justify-center text-white font-bold shadow-lg flex-shrink-0 text-sm sm:text-base`}
+                          className={`rank-badge w-20 h-20 sm:w-20 sm:h-20 rounded-full bg-gradient-to-r ${rank.color} flex items-center justify-center text-white font-bold shadow-lg flex-shrink-0 text-xs sm:text-base`}
                         >
-                          {rank.range.split(' - ')[0].replace(/,/g, 'K').replace('000', '')}
+                          <span className="rank-badge-label">{getRankBadgeLabel(rank.range)}</span>
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-3">
@@ -301,14 +309,14 @@ export default function Ranks() {
                 Admission Process Timeline
               </h2>
               
-              <div className="relative">
+                <div className="relative">
                 {/* Timeline Line */}
-                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[var(--brand)] to-[var(--brand-light)]"></div>
+                <div className="ranks-timeline-line absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[var(--brand)] to-[var(--brand-light)]"></div>
                 
                 <div className="space-y-8">
                   {admissionProcess.map((step, i) => (
-                    <div key={i} className="relative flex items-start gap-8">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] flex items-center justify-center text-white font-bold text-lg shadow-lg flex-shrink-0 z-10">
+                    <div key={i} className="ranks-timeline-item relative flex items-start gap-4 sm:gap-8">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] flex items-center justify-center text-white font-bold text-base sm:text-lg shadow-lg flex-shrink-0 z-10">
                         {step.step}
                       </div>
                       <div className="flex-1 pb-8">
@@ -351,20 +359,20 @@ export default function Ranks() {
 
             {/* Call to Action */}
             <Card className="text-center bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)]">
-              <h2 className="text-3xl font-bold text-[var(--text)] mb-4">Ready to Start Your Admission Journey?</h2>
-              <p className="text-[var(--text-soft)] mb-8 text-lg">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text)] mb-4">Ready to Start Your Admission Journey?</h2>
+              <p className="text-[var(--text-soft)] mb-8 text-base sm:text-lg">
                 Get detailed guidance on entrance exams and admission procedures for a successful application.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a 
                   href="/inquiry" 
-                  className="px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg"
                 >
                   Apply Now
                 </a>
                 <a 
                   href="/admissions/admission-procedure" 
-                  className="px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors"
+                  className="w-full sm:w-auto px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors"
                 >
                   View Admission Process
                 </a>
@@ -373,6 +381,48 @@ export default function Ranks() {
           </div>
         </div>
       </div>
+      <style>{`
+        .rank-badge {
+          min-width: 5rem;
+          min-height: 5rem;
+          padding: 0.5rem;
+        }
+
+        .rank-badge-label {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          line-height: 1.05;
+          white-space: normal;
+          overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 640px) {
+          .rank-stat-row {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .rank-badge {
+            width: 5.25rem;
+            height: 5.25rem;
+            font-size: 0.8rem;
+          }
+
+          .ranks-timeline-line {
+            left: 1.1rem;
+          }
+
+          .ranks-timeline-item {
+            gap: 1rem;
+          }
+
+          .main-content .space-y-section > * {
+            overflow: hidden;
+          }
+        }
+      `}</style>
     </div>
   );
 }

@@ -112,30 +112,30 @@ export default function SportsFacility() {
           <div className="space-y-section">
             {/* Sports Introduction */}
             <Card className="text-center bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)]">
-              <h2 className="text-3xl font-bold gradient-text mb-6">Holistic Development Through Sports</h2>
-              <p className="text-[var(--text-soft)] text-lg leading-relaxed mb-8 max-w-4xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl font-bold gradient-text mb-6">Holistic Development Through Sports</h2>
+              <p className="text-[var(--text-soft)] text-base sm:text-lg leading-relaxed mb-8 max-w-4xl mx-auto">
                 At Sanskrithi, we believe in the holistic development of our students. Our comprehensive sports 
                 facilities provide opportunities for physical fitness, competitive sports, recreational activities, 
                 and wellness programs that complement academic excellence with physical and mental well-being.
               </p>
               
-              <div className="grid sm:grid-cols-4 gap-6">
-                <div className="text-center p-4">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div className="text-center p-3 sm:p-4">
                   <span className="text-3xl block mb-2">🏟️</span>
                   <span className="text-2xl font-bold text-[var(--text)] block mb-1">10+</span>
                   <p className="text-[var(--text-soft)] text-sm">Sports Facilities</p>
                 </div>
-                <div className="text-center p-4">
+                <div className="text-center p-3 sm:p-4">
                   <span className="text-3xl block mb-2">🏋️</span>
                   <span className="text-2xl font-bold text-[var(--text)] block mb-1">Modern</span>
                   <p className="text-[var(--text-soft)] text-sm">Gymnasium</p>
                 </div>
-                <div className="text-center p-4">
+                <div className="text-center p-3 sm:p-4">
                   <span className="text-3xl block mb-2">👨‍🏫</span>
                   <span className="text-2xl font-bold text-[var(--text)] block mb-1">Expert</span>
                   <p className="text-[var(--text-soft)] text-sm">Trainers</p>
                 </div>
-                <div className="text-center p-4">
+                <div className="text-center p-3 sm:p-4">
                   <span className="text-3xl block mb-2">🏆</span>
                   <span className="text-2xl font-bold text-[var(--text)] block mb-1">Annual</span>
                   <p className="text-[var(--text-soft)] text-sm">Sports Day</p>
@@ -147,18 +147,18 @@ export default function SportsFacility() {
             <div className="space-y-12">
               {sportsCategories.map((category, i) => (
                 <Card key={i}>
-                  <h2 className="text-2xl font-bold text-[var(--text)] mb-8 flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
+                  <h2 className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-xl sm:text-2xl font-bold text-[var(--text)] mb-8">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center shrink-0">
                       <span className="text-2xl">{category.icon}</span>
                     </div>
-                    {category.category}
+                    <span className="leading-tight">{category.category}</span>
                   </h2>
                   
                   <div className="grid md:grid-cols-2 gap-8">
                     {category.facilities.map((facility, j) => (
-                      <div key={j} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
-                        <h3 className="text-lg font-semibold text-[var(--text)] mb-3">{facility.name}</h3>
-                        <p className="text-[var(--text-soft)] leading-relaxed">{facility.description}</p>
+                      <div key={j} className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
+                        <h3 className="text-base sm:text-lg font-semibold text-[var(--text)] mb-3">{facility.name}</h3>
+                        <p className="text-[var(--text-soft)] text-sm sm:text-base leading-relaxed">{facility.description}</p>
                       </div>
                     ))}
                   </div>
@@ -168,21 +168,21 @@ export default function SportsFacility() {
 
             {/* Gymnasium Facilities */}
             <Card>
-              <h2 className="text-2xl font-bold text-[var(--text)] mb-8 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
+              <h2 className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-xl sm:text-2xl font-bold text-[var(--text)] mb-8">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center shrink-0">
                   <span className="text-2xl">🏋️</span>
                 </div>
-                Fitness & Gymnasium
+                <span className="leading-tight">Fitness & Gymnasium</span>
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 {gymFacilities.map((gym, i) => (
-                  <div key={i} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] text-center">
-                    <div className="w-16 h-16 rounded-full bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center mx-auto mb-4">
+                  <div key={i} className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] text-center">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center mx-auto mb-4">
                       <span className="text-3xl">{gym.icon}</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-[var(--text)] mb-3">{gym.equipment}</h3>
-                    <p className="text-[var(--text-soft)] leading-relaxed">{gym.description}</p>
+                    <h3 className="text-base sm:text-lg font-semibold text-[var(--text)] mb-3">{gym.equipment}</h3>
+                    <p className="text-[var(--text-soft)] text-sm sm:text-base leading-relaxed">{gym.description}</p>
                   </div>
                 ))}
               </div>
@@ -190,11 +190,11 @@ export default function SportsFacility() {
 
             {/* Sports Programs */}
             <Card>
-              <h2 className="text-2xl font-bold text-[var(--text)] mb-8 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
+              <h2 className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-xl sm:text-2xl font-bold text-[var(--text)] mb-8">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center shrink-0">
                   <span className="text-2xl">🎯</span>
                 </div>
-                Sports Programs & Activities
+                <span className="leading-tight">Sports Programs & Activities</span>
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -221,23 +221,23 @@ export default function SportsFacility() {
 
             {/* Facility Timings */}
             <Card>
-              <h2 className="text-2xl font-bold text-[var(--text)] mb-8 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
+              <h2 className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-xl sm:text-2xl font-bold text-[var(--text)] mb-8">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center shrink-0">
                   <span className="text-2xl">⏰</span>
                 </div>
-                Facility Timings
+                <span className="leading-tight">Facility Timings</span>
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 {facilityTimings.map((timing, i) => (
-                  <div key={i} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
-                    <h3 className="text-lg font-semibold text-[var(--text)] mb-4">{timing.facility}</h3>
+                  <div key={i} className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
+                    <h3 className="text-base sm:text-lg font-semibold text-[var(--text)] mb-4">{timing.facility}</h3>
                     <div className="space-y-3">
-                      <div className="flex justify-between items-center p-3 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)]">
+                      <div className="sports-timing-row flex justify-between items-center gap-2 p-3 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)]">
                         <span className="text-[var(--text)]">Morning Session</span>
                         <span className="text-[var(--accent)] font-semibold">{timing.morning}</span>
                       </div>
-                      <div className="flex justify-between items-center p-3 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)]">
+                      <div className="sports-timing-row flex justify-between items-center gap-2 p-3 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)]">
                         <span className="text-[var(--text)]">Evening Session</span>
                         <span className="text-[var(--accent)] font-semibold">{timing.evening}</span>
                       </div>
@@ -246,13 +246,13 @@ export default function SportsFacility() {
                 ))}
               </div>
               
-              <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)] text-center">
-                <h3 className="text-lg font-semibold text-[var(--text)] mb-4">Weekend Schedule</h3>
+              <div className="mt-8 p-4 sm:p-6 rounded-xl bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)] text-center">
+                <h3 className="text-base sm:text-lg font-semibold text-[var(--text)] mb-4">Weekend Schedule</h3>
                 <p className="text-[var(--text-soft)] mb-4">
                   All sports facilities are available on weekends with extended hours.
                 </p>
                 <div className="flex justify-center">
-                  <div className="p-3 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)]">
+                  <div className="sports-weekend-box p-3 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)]">
                     <span className="text-[var(--text)] mr-4">Saturday & Sunday:</span>
                     <span className="text-[var(--accent)] font-semibold">7:00 AM - 6:00 PM</span>
                   </div>
@@ -262,21 +262,21 @@ export default function SportsFacility() {
 
             {/* Sports Membership */}
             <Card className="text-center bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)]">
-              <h2 className="text-2xl font-bold text-[var(--text)] mb-6">Join Our Sports Community</h2>
-              <p className="text-[var(--text-soft)] mb-8 text-lg max-w-3xl mx-auto">
+              <h2 className="text-xl sm:text-2xl font-bold text-[var(--text)] mb-6">Join Our Sports Community</h2>
+              <p className="text-[var(--text-soft)] mb-8 text-base sm:text-lg max-w-3xl mx-auto">
                 All students have access to our sports facilities as part of their holistic education experience. 
                 Participate in sports, stay fit, and be part of our vibrant sports community.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="/campus-life/activities"
-                  className="px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg"
                 >
                   View Activities
                 </a>
                 <a 
                   href="/inquiry"
-                  className="px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors"
+                  className="w-full sm:w-auto px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors"
                 >
                   Contact Sports Coordinator
                 </a>
@@ -285,6 +285,28 @@ export default function SportsFacility() {
           </div>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 640px) {
+          .sports-timing-row {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .sports-weekend-box {
+            width: 100%;
+            text-align: left;
+          }
+
+          .sports-weekend-box span {
+            display: block;
+          }
+
+          .sports-weekend-box span:first-child {
+            margin-right: 0;
+            margin-bottom: 0.35rem;
+          }
+        }
+      `}</style>
     </div>
   );
 }

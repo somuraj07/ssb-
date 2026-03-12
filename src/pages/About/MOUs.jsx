@@ -2,6 +2,23 @@ import React from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
 
 export default function MOUs() {
+  const infoCardStyle = {
+    textAlign: 'center',
+    padding: 'clamp(1.1rem, 3vw, 1.5rem)',
+    background: 'var(--glass-bg)',
+    borderRadius: 'var(--radius-lg)',
+    border: '1px solid var(--border-light)'
+  };
+
+  const impactCardStyle = {
+    background: 'var(--glass-bg)',
+    backdropFilter: 'var(--glass-backdrop)',
+    border: '1px solid var(--border-light)',
+    borderRadius: 'var(--radius-lg)',
+    padding: 'clamp(1.25rem, 3vw, 2rem)',
+    textAlign: 'center'
+  };
+
   const mouData = [
     {
       title: "RISE Europe MoU",
@@ -68,27 +85,27 @@ export default function MOUs() {
             <div className="panel">
               <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                 <h2 style={{ color: 'var(--text)', marginBottom: '1rem' }}>Our Global Partnerships</h2>
-                <p style={{ color: 'var(--text-soft)', fontSize: '1.1em', maxWidth: '800px', margin: '0 auto' }}>
+                <p style={{ color: 'var(--text-soft)', fontSize: 'clamp(1rem, 2.4vw, 1.1rem)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.75' }}>
                   SSB Puttaparthi has established strategic partnerships with leading international and national 
                   organizations to provide our students with world-class opportunities for learning, research, 
                   and professional development.
                 </p>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginBottom: '3rem' }}>
-                <div style={{ textAlign: 'center', padding: '1.5rem', background: 'var(--glass-bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-light)' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.25rem', marginBottom: '3rem' }}>
+                <div style={infoCardStyle}>
                   <div style={{ fontSize: '2.5em', marginBottom: '1rem' }}>🌍</div>
                   <h4 style={{ color: 'var(--brand)', marginBottom: '0.5rem' }}>Global Reach</h4>
                   <p style={{ color: 'var(--text-soft)', fontSize: '0.9em' }}>International partnerships across Europe and Asia</p>
                 </div>
                 
-                <div style={{ textAlign: 'center', padding: '1.5rem', background: 'var(--glass-bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-light)' }}>
+                <div style={infoCardStyle}>
                   <div style={{ fontSize: '2.5em', marginBottom: '1rem' }}>🤝</div>
                   <h4 style={{ color: 'var(--brand)', marginBottom: '0.5rem' }}>Strategic Alliances</h4>
                   <p style={{ color: 'var(--text-soft)', fontSize: '0.9em' }}>Meaningful collaborations with industry leaders</p>
                 </div>
                 
-                <div style={{ textAlign: 'center', padding: '1.5rem', background: 'var(--glass-bg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-light)' }}>
+                <div style={infoCardStyle}>
                   <div style={{ fontSize: '2.5em', marginBottom: '1rem' }}>📈</div>
                   <h4 style={{ color: 'var(--brand)', marginBottom: '0.5rem' }}>Growth Opportunities</h4>
                   <p style={{ color: 'var(--text-soft)', fontSize: '0.9em' }}>Enhanced career prospects for our students</p>
@@ -106,12 +123,13 @@ export default function MOUs() {
                 {mouData.map((mou, index) => (
                   <div
                     key={index}
+                    className="mou-card"
                     style={{
                       background: 'var(--glass-bg)',
                       backdropFilter: 'var(--glass-backdrop)',
                       border: '1px solid var(--border-light)',
                       borderRadius: 'var(--radius-xl)',
-                      padding: '2rem',
+                      padding: 'clamp(1.25rem, 3vw, 2rem)',
                       position: 'relative',
                       overflow: 'hidden'
                     }}
@@ -132,11 +150,11 @@ export default function MOUs() {
                       style={{ position: 'relative', zIndex: 1 }}
                     >
                       <div style={{
-                        fontSize: '3em',
+                        fontSize: 'clamp(2.5rem, 7vw, 3rem)',
                         textAlign: 'center',
                         background: 'var(--surface-1)',
                         borderRadius: 'var(--radius-lg)',
-                        
+                        padding: '0.75rem',
                         border: '1px solid var(--border-light)'
                       }}>
                         {mou.icon}
@@ -148,7 +166,7 @@ export default function MOUs() {
                           style={{ marginBottom: 0 }}
                         >
                           <h3
-                            style={{ color: mou.color, fontSize: '1.3em', fontWeight: 'bold', margin: 0 }}
+                            style={{ color: mou.color, fontSize: 'clamp(1.1rem, 3.4vw, 1.3rem)', fontWeight: 'bold', margin: 0, lineHeight: '1.3' }}
                             className="break-words"
                           >
                             {mou.title}
@@ -168,7 +186,7 @@ export default function MOUs() {
                           </span>
                         </div>
                         
-                        <h4 style={{ color: 'var(--text)', fontSize: '1.1em', marginBottom: '0.5rem' }}>
+                        <h4 style={{ color: 'var(--text)', fontSize: 'clamp(1rem, 3vw, 1.1rem)', marginBottom: '0.75rem', lineHeight: '1.5' }}>
                           {mou.partner}
                         </h4>
                         
@@ -185,24 +203,24 @@ export default function MOUs() {
                           </span>
                         </div>
                         
-                        <p style={{ color: 'var(--text-primary)', lineHeight: '1.7', marginBottom: '2rem' }}>
+                        <p style={{ color: 'var(--text-primary)', lineHeight: '1.75', marginBottom: '1.5rem' }}>
                           {mou.description}
                         </p>
                         
                         <div style={{
                           background: 'var(--surface-1)',
-                          padding: '2rem',
+                          padding: 'clamp(1rem, 3vw, 1.5rem)',
                           borderRadius: 'var(--radius-lg)',
                           border: '1px solid var(--border-light)'
                         }}>
                           <h5 style={{ color: mou.color, marginBottom: '1.5rem', fontSize: '1.1em' }}>
                             Key Benefits & Opportunities
                           </h5>
-                          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
+                          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.9rem' }}>
                             {mou.benefits.map((benefit, idx) => (
-                              <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                              <div key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
                                 <span style={{ color: mou.color, fontSize: '1.2em' }}>✓</span>
-                                <span style={{ color: 'var(--text-soft)', fontSize: '0.95em' }}>{benefit}</span>
+                                <span style={{ color: 'var(--text-soft)', fontSize: '0.95em', lineHeight: '1.55' }}>{benefit}</span>
                               </div>
                             ))}
                           </div>
@@ -221,14 +239,7 @@ export default function MOUs() {
               </h2>
               
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-                <div style={{
-                  background: 'var(--glass-bg)',
-                  backdropFilter: 'var(--glass-backdrop)',
-                  border: '1px solid var(--border-light)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: '2rem',
-                  textAlign: 'center'
-                }}>
+                <div style={impactCardStyle}>
                   <div style={{ fontSize: '3em', marginBottom: '1rem' }}>👥</div>
                   <div style={{ fontSize: '2.5em', fontWeight: 'bold', color: 'var(--brand)', marginBottom: '0.5rem' }}>150+</div>
                   <h4 style={{ color: 'var(--text)', marginBottom: '1rem' }}>Students Benefited</h4>
@@ -237,14 +248,7 @@ export default function MOUs() {
                   </p>
                 </div>
                 
-                <div style={{
-                  background: 'var(--glass-bg)',
-                  backdropFilter: 'var(--glass-backdrop)',
-                  border: '1px solid var(--border-light)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: '2rem',
-                  textAlign: 'center'
-                }}>
+                <div style={impactCardStyle}>
                   <div style={{ fontSize: '3em', marginBottom: '1rem' }}>🔬</div>
                   <div style={{ fontSize: '2.5em', fontWeight: 'bold', color: 'var(--brand)', marginBottom: '0.5rem' }}>25+</div>
                   <h4 style={{ color: 'var(--text)', marginBottom: '1rem' }}>Research Projects</h4>
@@ -253,14 +257,7 @@ export default function MOUs() {
                   </p>
                 </div>
                 
-                <div style={{
-                  background: 'var(--glass-bg)',
-                  backdropFilter: 'var(--glass-backdrop)',
-                  border: '1px solid var(--border-light)',
-                  borderRadius: 'var(--radius-lg)',
-                  padding: '2rem',
-                  textAlign: 'center'
-                }}>
+                <div style={impactCardStyle}>
                   <div style={{ fontSize: '3em', marginBottom: '1rem' }}>🏆</div>
                   <div style={{ fontSize: '2.5em', fontWeight: 'bold', color: 'var(--brand)', marginBottom: '0.5rem' }}>40+</div>
                   <h4 style={{ color: 'var(--text)', marginBottom: '1rem' }}>Certifications</h4>
@@ -274,7 +271,7 @@ export default function MOUs() {
             {/* Future Partnerships */}
             <div className="panel" style={{ textAlign: 'center' }}>
               <h2 style={{ color: 'var(--text)', marginBottom: '2rem' }}>Expanding Our Network</h2>
-              <p style={{ color: 'var(--text-soft)', fontSize: '1.1em', maxWidth: '600px', margin: '0 auto 2rem' }}>
+              <p style={{ color: 'var(--text-soft)', fontSize: 'clamp(1rem, 2.4vw, 1.1rem)', maxWidth: '600px', margin: '0 auto 2rem', lineHeight: '1.75' }}>
                 We continue to explore new partnerships and strengthen existing collaborations to provide 
                 even more opportunities for our students and faculty.
               </p>
@@ -290,7 +287,8 @@ export default function MOUs() {
                     textDecoration: 'none',
                     fontWeight: '600',
                     transition: 'all var(--transition-fast)',
-                    display: 'inline-block'
+                    display: 'inline-block',
+                    minWidth: '220px'
                   }}
                   className="hover:scale-105 hover:shadow-lg"
                 >
@@ -307,7 +305,8 @@ export default function MOUs() {
                     fontWeight: '600',
                     border: '1px solid var(--border-light)',
                     transition: 'all var(--transition-fast)',
-                    display: 'inline-block'
+                    display: 'inline-block',
+                    minWidth: '220px'
                   }}
                   className="hover:bg-[var(--surface-3)] hover:border-[var(--border-medium)]"
                 >
@@ -318,6 +317,30 @@ export default function MOUs() {
           </div>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 640px) {
+          .main-content .panel {
+            padding: 1.25rem;
+          }
+
+          .main-content .panel h2 {
+            margin-bottom: 1.25rem !important;
+          }
+
+          .mou-card {
+            border-radius: 1.25rem;
+          }
+
+          .mou-card [class*='sm:grid-cols-[80px'] {
+            grid-template-columns: 1fr !important;
+          }
+
+          .main-content .panel a {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      `}</style>
     </div>
   );
 }

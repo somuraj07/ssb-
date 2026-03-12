@@ -140,22 +140,26 @@ const programSections = [
 
 function ProgramAccordionItem({ item, isOpen, onToggle }) {
   return (
-    <div className="panel overflow-hidden">
+    <div className="panel overflow-hidden px-4 py-4 sm:px-6 sm:py-5">
       <button
         onClick={() => onToggle(item.id)}
-        className="w-full flex items-center justify-between text-left py-3 sm:py-2 min-h-[44px]"
+        className="w-full flex items-start justify-between gap-3 text-left py-1 min-h-[44px]"
       >
-        <div className="min-w-0 flex-1 pr-2">
-          <h3 className="text-base sm:text-lg font-semibold text-[var(--text)]">{item.title}</h3>
-          <p className="text-sm text-[var(--brand)] mt-0.5">{item.subtitle}</p>
-          <p className="text-xs text-[var(--text-muted)] mt-1 line-clamp-2 sm:line-clamp-none">{item.desc}</p>
+        <div className="min-w-0 flex-1">
+          <h3 className="text-[1.15rem] sm:text-lg leading-tight font-semibold text-[var(--text)]">{item.title}</h3>
+          <p className="text-sm text-[var(--brand)] mt-1">{item.subtitle}</p>
+          <p className="text-sm sm:text-xs leading-6 text-[var(--text-muted)] mt-2 line-clamp-3 sm:line-clamp-none">{item.desc}</p>
         </div>
-        {isOpen ? <ChevronUp className="w-5 h-5 text-[var(--brand)]" /> : <ChevronDown className="w-5 h-5 text-[var(--text-muted)]" />}
+        {isOpen ? (
+          <ChevronUp className="w-5 h-5 mt-2 shrink-0 text-[var(--brand)]" />
+        ) : (
+          <ChevronDown className="w-5 h-5 mt-2 shrink-0 text-[var(--text-muted)]" />
+        )}
       </button>
 
       {isOpen && (
         <div className="pt-4 mt-4 border-t border-[var(--border-light)]">
-          <div className="text-[var(--text-soft)]">{item.content}</div>
+          <div className="program-accordion-content text-[var(--text-soft)]">{item.content}</div>
         </div>
       )}
     </div>
@@ -180,9 +184,9 @@ export default function CommunityService() {
           />
 
           <div className="space-y-section">
-            <div className="panel">
+            <div className="panel community-intro-panel">
               <h2>Our Commitment to Society</h2>
-              <p>
+              <p className="community-intro-copy">
                 At SSB Puttaparthi, we believe in giving back to society and creating positive impact in our communities.
                 Our community service initiatives are designed to instill social responsibility in our students while
                 addressing real societal needs.
@@ -191,25 +195,25 @@ export default function CommunityService() {
 
             <div className="panel">
               <h2>Student Involvement</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
-                <div className="text-center">
+              <div className="community-stats-grid grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                <div className="community-stat-card text-center">
                   <div className="text-2xl font-bold text-[var(--brand)] mb-2">100%</div>
                   <p className="text-sm">Student Participation</p>
                 </div>
-                <div className="text-center">
+                <div className="community-stat-card text-center">
                   <div className="text-2xl font-bold text-[var(--brand)] mb-2">50+</div>
                   <p className="text-sm">Projects Annually</p>
                 </div>
-                <div className="text-center">
+                <div className="community-stat-card text-center">
                   <div className="text-2xl font-bold text-[var(--brand)] mb-2">1000+</div>
                   <p className="text-sm">Lives Impacted</p>
                 </div>
               </div>
             </div>
 
-            <div className="panel">
+            <div className="panel community-programs-panel">
               <h2>Our Programs</h2>
-              <p className="mb-6">All our community service programs in one place:</p>
+              <p className="mb-6 community-programs-copy">All our community service programs in one place:</p>
               <div className="space-y-4">
                 {programSections.map((item) => (
                   <ProgramAccordionItem
@@ -224,6 +228,87 @@ export default function CommunityService() {
           </div>
         </div>
       </div>
+      <style>{`
+        .program-accordion-content .card {
+          border-radius: 1.25rem;
+          background: rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          padding: 1.1rem;
+          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .program-accordion-content img {
+          padding-top: 0.75rem;
+          height: clamp(210px, 52vw, 320px);
+        }
+
+        .program-accordion-content > p {
+          font-size: 1rem;
+          line-height: 1.9;
+        }
+
+        .program-accordion-content > div[class*='flex'] > span {
+          min-width: 140px;
+        }
+
+        @media (max-width: 640px) {
+          .main-content .panel {
+            padding: 1.1rem;
+          }
+
+          .community-intro-copy,
+          .community-programs-copy {
+            font-size: 0.98rem;
+            line-height: 1.75;
+          }
+
+          .community-stats-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .community-stat-card {
+            padding: 0.9rem;
+            border-radius: 1rem;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+          }
+
+          .community-stat-card .text-2xl {
+            font-size: 1.6rem;
+          }
+
+          .program-accordion-content .card h4 {
+            font-size: 1.15rem;
+            line-height: 1.35;
+          }
+
+          .program-accordion-content .card p {
+            font-size: 0.98rem;
+            line-height: 1.7;
+          }
+
+          .program-accordion-content > p {
+            font-size: 0.98rem;
+            line-height: 1.75;
+          }
+
+          .program-accordion-content img {
+            height: 220px;
+            border-radius: 1.25rem;
+          }
+
+          .program-accordion-content > div[class*='flex'] {
+            gap: 0.75rem;
+            display: grid;
+            grid-template-columns: 1fr;
+          }
+
+          .program-accordion-content > div[class*='flex'] > span {
+            min-width: 0;
+            font-size: 0.98rem;
+          }
+        }
+      `}</style>
     </div>
   );
 }

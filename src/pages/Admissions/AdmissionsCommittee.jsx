@@ -166,23 +166,23 @@ export default function AdmissionsCommittee() {
           <div className="space-y-section">
             {/* Committee Overview */}
             <Card className="text-center bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)]">
-              <h2 className="text-3xl font-bold gradient-text mb-6">Our Mission</h2>
-              <p className="text-[var(--text-soft)] text-lg leading-relaxed mb-8 max-w-4xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl font-bold gradient-text mb-6">Our Mission</h2>
+              <p className="text-[var(--text-soft)] text-base sm:text-lg leading-relaxed mb-8 max-w-4xl mx-auto">
                 The Admissions Committee at Sanskrithi School of Business is committed to ensuring a fair, 
                 transparent, and merit-based selection process. Our experienced panel of educators and industry 
                 experts work together to identify and welcome the most promising candidates who align with our 
                 institutional values and academic standards.
               </p>
-              <div className="grid sm:grid-cols-3 gap-6">
-                <div className="text-center">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+                <div className="text-center p-3 sm:p-0">
                   <span className="text-4xl font-bold text-[var(--text)]">7</span>
                   <p className="text-[var(--text-soft)]">Committee Members</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center p-3 sm:p-0">
                   <span className="text-4xl font-bold text-[var(--text)]">25+</span>
                   <p className="text-[var(--text-soft)]">Years Average Experience</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center p-3 sm:p-0">
                   <span className="text-4xl font-bold text-[var(--text)]">100%</span>
                   <p className="text-[var(--text-soft)]">Transparent Process</p>
                 </div>
@@ -191,22 +191,22 @@ export default function AdmissionsCommittee() {
 
             {/* Committee Members */}
             <Card>
-              <h2 className="text-2xl font-bold text-[var(--text)] mb-8 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
+              <h2 className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-xl sm:text-2xl font-bold text-[var(--text)] mb-8">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center shrink-0">
                   <span className="text-2xl">👥</span>
                 </div>
-                Committee Members
+                <span className="leading-tight">Committee Members</span>
               </h2>
               
               <div className="grid lg:grid-cols-2 gap-8">
                 {committeeMembers.map((member, i) => (
-                  <div key={i} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors">
-                    <div className="flex items-start gap-6 mb-4">
-                      <div className="w-16 h-16 rounded-full bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center flex-shrink-0">
+                  <div key={i} className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors">
+                    <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-4">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center flex-shrink-0">
                         <span className="text-3xl">{member.image}</span>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-[var(--text)] mb-1">{member.name}</h3>
+                        <h3 className="text-lg sm:text-xl font-semibold text-[var(--text)] mb-1 break-words">{member.name}</h3>
                         <p className="text-[var(--text-soft)] font-medium mb-2">{member.position}</p>
                         <p className="text-[var(--text-soft)] text-sm">{member.designation}</p>
                       </div>
@@ -249,20 +249,20 @@ export default function AdmissionsCommittee() {
 
             {/* Committee Responsibilities */}
             <Card>
-              <h2 className="text-2xl font-bold text-[var(--text)] mb-8 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
+              <h2 className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-xl sm:text-2xl font-bold text-[var(--text)] mb-8">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center shrink-0">
                   <span className="text-2xl">⚙️</span>
                 </div>
-                Committee Responsibilities
+                <span className="leading-tight">Committee Responsibilities</span>
               </h2>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {committeeResponsibilities.map((responsibility, i) => (
-                  <div key={i} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors">
+                  <div key={i} className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)] hover:bg-[var(--surface-2)] transition-colors">
                     <div className="w-14 h-14 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center mb-4">
                       <span className="text-2xl">{responsibility.icon}</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-[var(--text)] mb-3">{responsibility.area}</h3>
+                    <h3 className="text-base sm:text-lg font-semibold text-[var(--text)] mb-3">{responsibility.area}</h3>
                     <p className="text-[var(--text-soft)] text-sm leading-relaxed">{responsibility.description}</p>
                   </div>
                 ))}
@@ -271,18 +271,18 @@ export default function AdmissionsCommittee() {
 
             {/* Meeting Schedule */}
             <Card>
-              <h2 className="text-2xl font-bold text-[var(--text)] mb-8 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center">
+              <h2 className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-xl sm:text-2xl font-bold text-[var(--text)] mb-8">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] flex items-center justify-center shrink-0">
                   <span className="text-2xl">📅</span>
                 </div>
-                Meeting Schedule
+                <span className="leading-tight">Meeting Schedule</span>
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 {meetingSchedule.map((meeting, i) => (
-                  <div key={i} className="p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
-                    <div className="flex items-start justify-between mb-4">
-                      <h3 className="text-lg font-semibold text-[var(--text)]">{meeting.meeting}</h3>
+                  <div key={i} className="p-4 sm:p-6 rounded-xl bg-[var(--surface-1)] border border-[var(--border-light)]">
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-4">
+                      <h3 className="text-base sm:text-lg font-semibold text-[var(--text)]">{meeting.meeting}</h3>
                       <span className="px-3 py-1 bg-[var(--glass-bg)] backdrop-blur-sm border border-[var(--glass-border)] text-[var(--accent)] rounded-full text-sm font-medium">
                         {meeting.frequency}
                       </span>
@@ -305,20 +305,20 @@ export default function AdmissionsCommittee() {
 
             {/* Call to Action */}
             <Card className="text-center bg-gradient-to-r from-[var(--surface-1)] to-[var(--surface-2)]">
-              <h2 className="text-2xl font-bold text-[var(--text)] mb-4">Have Questions About Admissions?</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-[var(--text)] mb-4">Have Questions About Admissions?</h2>
               <p className="text-[var(--text-soft)] mb-8">
                 Our admissions committee is here to help you through every step of the application process.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a 
                   href="/inquiry" 
-                  className="px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[var(--brand)] to-[var(--brand-light)] text-white font-semibold rounded-xl hover:scale-105 transition-transform shadow-lg"
                 >
                   Contact Committee
                 </a>
                 <a 
                   href="/inquiry" 
-                  className="px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors"
+                  className="w-full sm:w-auto px-8 py-4 bg-[var(--surface-2)] text-[var(--text)] font-semibold rounded-xl border border-[var(--border-light)] hover:bg-[var(--surface-3)] transition-colors"
                 >
                   Start Application
                 </a>
@@ -327,6 +327,13 @@ export default function AdmissionsCommittee() {
           </div>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 640px) {
+          .main-content .space-y-section > * {
+            overflow: hidden;
+          }
+        }
+      `}</style>
     </div>
   );
 }

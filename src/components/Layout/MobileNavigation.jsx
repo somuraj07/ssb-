@@ -110,10 +110,10 @@ const MobileNavigation = () => {
   return (
     <>
       {/* Mobile Menu Icon Trigger */}
-      <div className="fixed bottom-8 right-8 z-50">
+      <div className="fixed bottom-5 right-4 sm:bottom-8 sm:right-8 z-50">
         <button
           onClick={() => setIsOpen(true)}
-          className="mobile-menu-trigger group relative bg-gradient-to-br from-orange-500 to-red-600 text-white p-5 rounded-3xl shadow-2xl hover:shadow-orange-500/25 transform hover:scale-110 transition-all duration-500 animate-pulse hover:animate-none"
+          className="mobile-menu-trigger group relative bg-gradient-to-br from-orange-500 to-red-600 text-white p-4 sm:p-5 rounded-[1.4rem] sm:rounded-3xl shadow-2xl hover:shadow-orange-500/25 transform hover:scale-110 transition-all duration-500 animate-pulse hover:animate-none"
           aria-label="Open navigation menu"
         >
           <div className="relative z-10">
@@ -141,14 +141,14 @@ const MobileNavigation = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <div className="flex items-center justify-center min-h-screen p-4">
-              <div className="relative">
+            <div className="flex items-center justify-center min-h-screen p-2 sm:p-4">
+              <div className="relative w-full max-w-[24rem]">
                 {/* Mobile Phone Frame */}
                 <div className="shadow-2xl shadow-black/50">
                   <div className="bg-black p-1 rounded-[2rem] shadow-2xl">
                     {/* Mobile Screen */}
                     <motion.div 
-                      className="bg-black/95 backdrop-blur-xl rounded-[1.8rem] shadow-2xl border border-gray-800/50 h-[85vh] max-h-[700px] w-80 overflow-hidden relative"
+                      className="bg-black/95 backdrop-blur-xl rounded-[1.8rem] shadow-2xl border border-gray-800/50 h-[min(88dvh,760px)] w-full overflow-hidden relative"
                       initial={{ scale: 0.1, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       exit={{ scale: 0.9, opacity: 0 }}
@@ -160,7 +160,7 @@ const MobileNavigation = () => {
                       }}
                     >
                       {/* Phone Notch */}
-                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl flex items-center justify-center z-10">
+                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-28 sm:w-32 h-6 bg-black rounded-b-2xl flex items-center justify-center z-10">
                         {/* Speaker */}
                         <div className="w-12 h-1 bg-gray-600 rounded-full"></div>
                         {/* Camera */}
@@ -168,7 +168,7 @@ const MobileNavigation = () => {
                       </div>
                   {/* Header with Close Button */}
                   <motion.div 
-                    className="flex items-center justify-between p-3 border-b border-gray-800/50"
+                    className="flex items-center justify-between px-3 sm:px-4 pt-8 pb-3 border-b border-gray-800/50"
                     initial={{ opacity: 0, y: -15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -189,10 +189,10 @@ const MobileNavigation = () => {
                   </motion.div>
 
                 {/* Scrollable Content */}
-                <div className="h-[calc(85vh-4rem)] overflow-y-auto">
+                <div className="h-[calc(min(88dvh,760px)-4.75rem)] overflow-y-auto overscroll-contain">
                   {currentSection ? (
                     /* Sub-menu View */
-                    <div className="p-3">
+                    <div className="p-3 sm:p-4 pb-6">
                       {/* Back Button */}
                       <motion.button
                         onClick={goBack}
@@ -211,7 +211,7 @@ const MobileNavigation = () => {
 
                       {/* Section Title */}
                       <motion.div 
-                        className="text-center mb-4 bg-gray-900/60 border border-gray-800/50 rounded-lg p-3"
+                        className="text-center mb-4 bg-gray-900/60 border border-gray-800/50 rounded-xl p-4"
                         initial={{ scale: 0.3, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ type: "spring", stiffness: 400, damping: 30, delay: 0.05 }}
@@ -247,7 +247,7 @@ const MobileNavigation = () => {
                           <motion.button
                             key={index}
                             onClick={() => handleSubItemClick(subItem)}
-                            className="w-full bg-gray-900/60 hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-red-600/20 rounded-lg p-3 text-left border border-gray-800/50 hover:border-orange-500/40 group"
+                            className="w-full bg-gray-900/60 hover:bg-gradient-to-r hover:from-orange-500/20 hover:to-red-600/20 rounded-xl p-3.5 text-left border border-gray-800/50 hover:border-orange-500/40 group"
                             variants={{
                               hidden: { 
                                 scale: 0.5,
@@ -272,8 +272,8 @@ const MobileNavigation = () => {
                             <div className="flex items-center space-x-3">
                               <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
                               <div className="flex-1 min-w-0">
-                                <h3 className="font-medium text-white group-hover:text-orange-400 transition-colors duration-200 text-sm truncate">{subItem.label}</h3>
-                                <p className="text-xs text-gray-500 truncate">{subItem.description}</p>
+                                <h3 className="font-medium text-white group-hover:text-orange-400 transition-colors duration-200 text-sm leading-snug">{subItem.label}</h3>
+                                <p className="text-xs text-gray-400 leading-relaxed mt-1 line-clamp-2">{subItem.description}</p>
                               </div>
                               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-gray-500 group-hover:text-orange-400 transition-colors duration-200 flex-shrink-0">
                                 <path d="m9 18 6-6-6-6"/>
@@ -285,10 +285,10 @@ const MobileNavigation = () => {
                     </div>
                   ) : (
                     /* Main Menu View */
-                    <div className="h-full flex items-center justify-center p-3">
+                    <div className="min-h-full flex items-center justify-center p-3 sm:p-4">
                       {/* Grid of Navigation Items */}
                       <motion.div 
-                        className="grid grid-cols-3 gap-3 w-full max-w-sm"
+                        className="grid grid-cols-3 gap-3 w-full"
                         initial="hidden"
                         animate="visible"
                         variants={{
@@ -306,7 +306,7 @@ const MobileNavigation = () => {
                           <motion.button
                             key={index}
                             onClick={() => handleItemClick(item)}
-                            className="group relative bg-gray-900/70 hover:bg-gradient-to-br hover:from-orange-500/30 hover:to-red-600/30 backdrop-blur-sm rounded-xl p-1 border border-gray-800/50 hover:border-orange-500/50 flex flex-col items-center justify-center space-y-0.5 min-h-[45px] aspect-square shadow-lg hover:shadow-xl transition-all duration-200"
+                            className="group relative bg-gray-900/70 hover:bg-gradient-to-br hover:from-orange-500/30 hover:to-red-600/30 backdrop-blur-sm rounded-xl p-2 border border-gray-800/50 hover:border-orange-500/50 flex flex-col items-center justify-center space-y-1 min-h-[84px] aspect-square shadow-lg hover:shadow-xl transition-all duration-200"
                             variants={{
                               hidden: { 
                                 y: 20,
@@ -339,7 +339,7 @@ const MobileNavigation = () => {
                               {getAppIcon(item.label)}
                             </motion.div>
                             <div className="text-center">
-                              <h3 id='mobileHeading' className="text-xs font-light text-white group-hover:text-orange-300 transition-colors duration-200 leading-none text-center px-0.5">
+                              <h3 id='mobileHeading' className="text-[11px] sm:text-xs font-light text-white group-hover:text-orange-300 transition-colors duration-200 leading-tight text-center px-0.5">
                                 {item.label}
                               </h3>
                               {item.children && (
@@ -384,7 +384,7 @@ const MobileNavigation = () => {
                 </div>
                 
                       {/* Home Indicator */}
-                      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-white/30 rounded-full"></div>
+                      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-24 sm:w-32 h-1 bg-white/30 rounded-full"></div>
                     </motion.div>
                   </div>
                 </div>

@@ -2,6 +2,18 @@ import React from 'react';
 import SectionHeader from '../../components/ui/SectionHeader';
 import chairman from "../../assets/chairman.png";
 export default function AboutOverview() {
+  const statGroupStyle = {
+    display: 'flex',
+    gap: '2rem',
+    marginTop: '2rem',
+    flexWrap: 'wrap'
+  };
+
+  const statItemStyle = {
+    textAlign: 'center',
+    flex: '1 1 140px'
+  };
+
   const teamMembers = [
     {
       name: "Dr. Balakoteswari M",
@@ -84,12 +96,12 @@ export default function AboutOverview() {
                     founders envisioned an institution that would bridge the gap between traditional business 
                     education and modern industry requirements.
                   </p>
-                  <div style={{ display: 'flex', gap: '2rem', marginTop: '2rem' }}>
-                    <div style={{ textAlign: 'center' }}>
+                  <div style={statGroupStyle}>
+                    <div style={statItemStyle}>
                       <div style={{ fontSize: '2em', fontWeight: 'bold', color: 'var(--brand)' }}>2008</div>
                       <div style={{ fontSize: '0.9em', color: 'var(--text-muted)' }}>Established</div>
                     </div>
-                    <div style={{ textAlign: 'center' }}>
+                    <div style={statItemStyle}>
                       <div style={{ fontSize: '2em', fontWeight: 'bold', color: 'var(--brand)' }}>15+</div>
                       <div style={{ fontSize: '0.9em', color: 'var(--text-muted)' }}>Years of Excellence</div>
                     </div>
@@ -106,12 +118,12 @@ export default function AboutOverview() {
                     quality education and holistic development has earned us recognition from industry and 
                     academic bodies alike.
                   </p>
-                  <div style={{ display: 'flex', gap: '2rem', marginTop: '2rem' }}>
-                    <div style={{ textAlign: 'center' }}>
+                  <div style={statGroupStyle}>
+                    <div style={statItemStyle}>
                       <div style={{ fontSize: '2em', fontWeight: 'bold', color: 'var(--brand)' }}>1200+</div>
                       <div style={{ fontSize: '0.9em', color: 'var(--text-muted)' }}>Alumni Network</div>
                     </div>
-                    <div style={{ textAlign: 'center' }}>
+                    <div style={statItemStyle}>
                       <div style={{ fontSize: '2em', fontWeight: 'bold', color: 'var(--brand)' }}>95%</div>
                       <div style={{ fontSize: '0.9em', color: 'var(--text-muted)' }}>Placement Rate</div>
                     </div>
@@ -233,7 +245,7 @@ export default function AboutOverview() {
                   <div style={{ 
                     background: 'var(--glass-bg)',
                     backdropFilter: 'var(--glass-backdrop)',
-                    padding: '2rem',
+                    padding: 'clamp(1.25rem, 4vw, 2rem)',
                     borderRadius: '16px',
                     boxShadow: 'var(--shadow-medium)',
                     border: '1px solid var(--border-light)'
@@ -242,8 +254,8 @@ export default function AboutOverview() {
                       src={chairman}
                       alt="B. Vijay Bhaskar Reddy - Chairman"
                       style={{
-                        width: '220px',
-                        height: '220px',
+                        width: 'min(220px, 100%)',
+                        aspectRatio: '1 / 1',
                         borderRadius: '50%',
                         objectFit: 'cover',
                         margin: '0 auto 1.5rem',
@@ -270,12 +282,12 @@ export default function AboutOverview() {
                   </div>
                 </div>
                 
-                <div style={{ padding: '2rem' }}>
+                <div style={{ padding: 'clamp(0rem, 2vw, 2rem)' }}>
                   <div style={{ 
                     position: 'relative',
                     background: 'var(--glass-bg)',
                     backdropFilter: 'var(--glass-backdrop)',
-                    padding: '2.5rem',
+                    padding: 'clamp(1.25rem, 4vw, 2.5rem)',
                     borderRadius: '12px',
                     boxShadow: 'var(--shadow-soft)',
                     border: '1px solid var(--border-light)',
@@ -293,11 +305,13 @@ export default function AboutOverview() {
                     </div>
                     <blockquote style={{ 
                       fontStyle: 'italic', 
-                      fontSize: '1.3em', 
-                      lineHeight: '1.6',
+                      fontSize: 'clamp(1rem, 2.8vw, 1.3rem)',
+                      lineHeight: '1.75',
                       marginBottom: '1.5rem',
                       color: 'var(--text)',
-                      paddingLeft: '2rem'
+                      paddingLeft: 'clamp(0.75rem, 3vw, 2rem)',
+                      paddingRight: 'clamp(0.25rem, 2vw, 1rem)',
+                      overflowWrap: 'anywhere'
                     }}>
                       Education is not just about acquiring knowledge; it's about transforming lives and 
                       building character. At SSB Puttaparthi, we are committed to nurturing not just 
@@ -317,7 +331,13 @@ export default function AboutOverview() {
                     </div>
                   </div>
                   
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
+                  <div style={{ 
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                    gap: '1.5rem',
+                    alignItems: 'start',
+                    marginBottom: '2rem'
+                  }}>
                     <div>
                       <p style={{ marginBottom: '1.5rem', lineHeight: '1.7', color: 'var(--text-primary)' }}>
                         Over the past 15 years, we have witnessed thousands of young minds transform into 
@@ -332,7 +352,7 @@ export default function AboutOverview() {
                         alt="Leadership in Action"
                         style={{
                           width: '100%',
-                          height: '150px',
+                          height: 'clamp(180px, 38vw, 240px)',
                           objectFit: 'cover',
                           borderRadius: '8px'
                         }}
@@ -453,6 +473,31 @@ export default function AboutOverview() {
           </div>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 640px) {
+          .main-content .panel {
+            padding: 1.25rem;
+          }
+
+          .main-content .panel h2 {
+            margin-bottom: 1rem;
+          }
+
+          .main-content .panel p,
+          .main-content .panel li,
+          .main-content blockquote {
+            font-size: 0.98rem;
+          }
+
+          .main-content .image-frame {
+            min-height: 220px;
+          }
+
+          .main-content .image-caption {
+            font-size: 0.9rem;
+          }
+        }
+      `}</style>
     </div>
   );
 }

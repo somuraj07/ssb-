@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Upload, FileText, Loader2, CheckCircle, AlertCircle, BookOpen, Trash2 } from 'lucide-react';
 import SectionHeader from '../components/ui/SectionHeader';
-import { supabase, PDF_BUCKET, DOCUMENTS_TABLE } from '../lib/supabase';
+import { supabase, PDF_BUCKET, DOCUMENTS_TABLE, MAX_FILE_SIZE_MB } from '../lib/supabase';
 import { NAAC_CRITERIA } from '../data/naacCriteria';
 
 /** Fetch existing section / subsection / sub-subsection names for dropdowns */
@@ -136,6 +136,13 @@ export default function UploadPdf() {
         setFile(null);
         return;
       }
+      const maxBytes = MAX_FILE_SIZE_MB * 1024 * 1024;
+      if (selected.size > maxBytes) {
+        setStatus('error');
+        setErrorMessage(`File size must be under ${MAX_FILE_SIZE_MB} MB. Current file: ${(selected.size / (1024 * 1024)).toFixed(1)} MB.`);
+        setFile(null);
+        return;
+      }
       setFile(selected);
       setStatus(null);
       setErrorMessage('');
@@ -187,6 +194,12 @@ export default function UploadPdf() {
     if (!criterionId || !sectionTitle.trim()) {
       setStatus('error');
       setErrorMessage('Please select a criterion and enter a section title.');
+      return;
+    }
+    const maxBytes = MAX_FILE_SIZE_MB * 1024 * 1024;
+    if (file.size > maxBytes) {
+      setStatus('error');
+      setErrorMessage(`File size must be under ${MAX_FILE_SIZE_MB} MB. Your file is ${(file.size / (1024 * 1024)).toFixed(1)} MB. Ensure Supabase Storage bucket allows files up to ${MAX_FILE_SIZE_MB} MB.`);
       return;
     }
 
@@ -505,6 +518,7 @@ export default function UploadPdf() {
 
                 <div>
                   <label className="block text-sm font-medium text-[var(--text-soft)] mb-2">6. PDF File *</label>
+                  <p className="text-xs text-[var(--text-muted)] mb-2">Maximum file size: {MAX_FILE_SIZE_MB} MB (large files supported)</p>
                   <label className="flex items-center justify-center gap-3 px-4 py-6 rounded-xl bg-[var(--surface-1)] border-2 border-dashed border-[var(--border-light)] hover:border-[var(--brand)]/50 cursor-pointer transition-colors">
                     <Upload className="w-8 h-8 text-[var(--text-muted)]" />
                     <span className="text-[var(--text-soft)]">
@@ -521,7 +535,7 @@ export default function UploadPdf() {
                   {file && (
                     <p className="mt-2 text-sm text-[var(--text-muted)] flex items-center gap-2">
                       <FileText className="w-4 h-4" />
-                      {file.name} ({(file.size / 1024).toFixed(1)} KB)
+                      {file.name} ({(file.size / 1024 / 1024).toFixed(2)} MB)
                     </p>
                   )}
                 </div>

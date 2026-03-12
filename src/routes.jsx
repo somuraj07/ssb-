@@ -65,6 +65,7 @@ const PreviousQuestionPapers = lazy(() => import('./pages/Examinations/QuestionP
 const ExaminationDownloads = lazy(() => import('./pages/Examinations/Downloads.jsx'));
 const UploadPdf = lazy(() => import('./pages/UploadPdf.jsx'));
 const NAAC = lazy(() => import('./pages/NAAC.jsx'));
+const DVV = lazy(() => import('./pages/NAAC/DVV.jsx'));
 const Placements = lazy(() => import('./pages/Placements.jsx'));
 
 // Placements sub-pages
@@ -174,6 +175,7 @@ export default [
   { path: '/examinations/downloads', element: createElement(ExaminationDownloads) },
   { path: '/upload-pdf', element: createElement(UploadPdf) },
   { path: '/naac', element: createElement(NAAC) },
+  { path: '/naac/dvv', element: createElement(DVV) },
   { path: '/placements', element: createElement(Placements) },
   
   // Placements sub-pages

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronRight, FileText, ExternalLink } from 'lucide-react';
 import { NAAC_NAVBAR } from '../data/naacCriteria';
@@ -174,16 +175,29 @@ function SubSubsectionBlock({ label, files }) {
 }
 
 export default function NAAC() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const { tree, loading } = useNaacTree();
 
-  const criteriaWithDocs = NAAC_NAVBAR.filter((item) => {
-    const id = item.id;
-    if (id.startsWith('criteria-') || id === 'iqac' || id === 'dvv' || id === 'ssr') {
-      const sections = tree[id] || {};
-      return Object.keys(sections).length > 0;
-    }
-    return false;
-  });
+  const navItems = NAAC_NAVBAR;
+
+  const hashId = location.hash ? location.hash.slice(1) : '';
+  const validIds = navItems.filter((i) => i.id !== 'dvv').map((i) => i.id);
+  const [selectedId, setSelectedId] = useState(() => (hashId && validIds.includes(hashId) ? hashId : validIds[0] || ''));
+
+  useEffect(() => {
+    if (hashId && validIds.includes(hashId)) setSelectedId(hashId);
+  }, [hashId]); // validIds is stable (from NAAC_NAVBAR)
+
+  const handleSelect = (id) => {
+    if (id === 'dvv') return;
+    setSelectedId(id);
+    navigate(`/naac#${id}`, { replace: true });
+  };
+
+  const selectedItem = navItems.find((i) => i.id === selectedId);
+  const sections = selectedItem && selectedItem.id !== 'dvv' ? tree[selectedItem.id] || {} : {};
+  const sectionEntries = Object.entries(sections);
 
   return (
     <div className="main-content min-h-screen">
@@ -199,13 +213,7 @@ export default function NAAC() {
             )}
           </header>
 
-          {!loading && criteriaWithDocs.length === 0 && (
-            <div className="text-center py-20 px-6 rounded-2xl border border-[var(--border-light)] bg-[var(--surface-1)] max-w-2xl mx-auto">
-              <p className="text-[var(--text-muted)]">No documents yet.</p>
-            </div>
-          )}
-
-          {!loading && criteriaWithDocs.length > 0 && (
+          {!loading && (
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
               <nav className="lg:w-56 flex-shrink-0 lg:pt-1" aria-label="Criteria navigation">
                 <div
@@ -217,14 +225,24 @@ export default function NAAC() {
                 >
                   <p className="text-xs font-semibold uppercase tracking-wider text-[var(--text-muted)] mb-4 pl-1">Criteria</p>
                   <ul className="space-y-0.5">
-                    {criteriaWithDocs.map((item) => (
+                    {navItems.map((item) => (
                       <li key={item.id}>
-                        <a
-                          href={`#${item.id}`}
-                          className="block py-2.5 px-3 rounded-xl text-sm font-medium text-[var(--text-soft)] hover:bg-[var(--surface-2)] hover:text-[var(--text)] transition-colors"
-                        >
-                          {item.label}
-                        </a>
+                        {item.id === 'dvv' ? (
+                          <Link
+                            to="/naac/dvv"
+                            className="block py-2.5 px-3 rounded-xl text-sm font-medium text-[var(--text-soft)] hover:bg-[var(--surface-2)] hover:text-[var(--text)] transition-colors"
+                          >
+                            {item.label}
+                          </Link>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={() => handleSelect(item.id)}
+                            className={`block w-full text-left py-2.5 px-3 rounded-xl text-sm font-medium transition-colors ${selectedId === item.id ? 'bg-[var(--surface-2)] text-[var(--text)]' : 'text-[var(--text-soft)] hover:bg-[var(--surface-2)] hover:text-[var(--text)]'}`}
+                          >
+                            {item.label}
+                          </button>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -232,33 +250,34 @@ export default function NAAC() {
               </nav>
 
               <div className="flex-1 min-w-0 pl-0 lg:pl-2">
-                <div className="space-y-16">
-                  {criteriaWithDocs.map((item) => {
-                    const sections = tree[item.id] || {};
-                    const sectionEntries = Object.entries(sections);
-                    return (
-                      <section
-                        key={item.id}
-                        id={item.id}
-                        className="scroll-mt-32"
-                      >
-                        <h2 className="text-2xl md:text-3xl font-bold text-[var(--text)] mb-2 pb-4 mt-0 border-b border-[var(--border-light)]">
-                          {item.label}
-                        </h2>
-                        <div className="pt-2 space-y-5">
-                          {sectionEntries.map(([sectionTitle, subsections]) => (
-                            <SectionBlock
-                              key={sectionTitle}
-                              sectionTitle={sectionTitle}
-                              subsections={subsections}
-                              defaultOpen={sectionEntries.length <= 2}
-                            />
-                          ))}
-                        </div>
-                      </section>
-                    );
-                  })}
-                </div>
+                {selectedItem && selectedItem.id !== 'dvv' && (
+                  <section id={selectedId} className="scroll-mt-32">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[var(--text)] mb-2 pb-4 mt-0 border-b border-[var(--border-light)]">
+                      {selectedItem.label}
+                    </h2>
+                    {sectionEntries.length === 0 ? (
+                      <div className="py-12 rounded-2xl border border-[var(--border-light)] bg-[var(--surface-1)] text-center">
+                        <p className="text-[var(--text-muted)]">No documents for this section yet.</p>
+                      </div>
+                    ) : (
+                      <div className="pt-2 space-y-5">
+                        {sectionEntries.map(([sectionTitle, subsections]) => (
+                          <SectionBlock
+                            key={sectionTitle}
+                            sectionTitle={sectionTitle}
+                            subsections={subsections}
+                            defaultOpen={true}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </section>
+                )}
+                {(!selectedItem || selectedId === '') && !loading && (
+                  <div className="py-12 rounded-2xl border border-[var(--border-light)] bg-[var(--surface-1)] text-center">
+                    <p className="text-[var(--text-muted)]">Select a section from the sidebar.</p>
+                  </div>
+                )}
               </div>
             </div>
           )}

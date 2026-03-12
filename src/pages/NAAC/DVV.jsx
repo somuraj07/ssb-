@@ -251,7 +251,7 @@ function DocumentCell({ criterionId, sectionId, metricId, slotId, label, bySlot,
 
 function MetricSection({ section, criterionId, bySlot, onUploaded }) {
   const { metricId, title, subTitle, heiInput, affectedMetrics, rows } = section;
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="rounded-xl border border-[var(--border-light)] bg-[var(--surface-0)] overflow-hidden mb-6">

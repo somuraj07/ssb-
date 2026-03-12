@@ -266,7 +266,7 @@ export default function NAAC() {
                             key={sectionTitle}
                             sectionTitle={sectionTitle}
                             subsections={subsections}
-                            defaultOpen={true}
+                            defaultOpen={false}
                           />
                         ))}
                       </div>

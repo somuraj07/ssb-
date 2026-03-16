@@ -256,11 +256,7 @@ export const NAV = [
         href: '/committees/internal-complaint',
         description: 'Addressing workplace harassment and discrimination'
       },
-      {
-        label: 'Grievance Redressal',
-        href: '/committees/grievance-redressal',
-        description: 'Student grievance handling and resolution'
-      },
+     
       {
         label: 'Academic Committee',
         href: '/committees/academic',
